@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "minsuh-dev-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Minsuh's Dev Blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Minsuh Jo <minsuh3203@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jjminsuh/jjminsuh.github.io/issues"
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.0.17",
