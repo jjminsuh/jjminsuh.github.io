@@ -129,5 +129,24 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Pretendard Variable`,
+            file: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css`
+          },
+          {
+            name: `Elice Digital Coding`,
+            file: `https://cdn-front-door.elice.io/font/static/f/digitalcoding/700/EliceDigitalCoding.ttf`
+            // file: `https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2`
+            // file: `https://font.elice.io/css?family=Elice+Digital+Coding`
+          }
+        ]
+      }
+    },
   ],
 }
