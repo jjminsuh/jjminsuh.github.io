@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
@@ -37,20 +37,49 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile-pic.png"
-        width={50}
-        height={50}
+        width={80}
+        height={80}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <p className="bio-description">
-          {author.name}
-          <br />
-          {author?.summary || null}
-          {` `}
-          <br />
-        </p>
+        <div>
+          <div className="bio-name">
+            {author.name}
+          </div>
+          <div className="bio-description">
+            {author?.summary || null}
+          </div>
+        </div>
       )}
+      <div className="bio-link-wrapper">
+        <div>
+          <a href="https://github.com/jjminsuh">
+            <StaticImage
+              className="bio-link-icon"
+              layout="fixed"
+              formats={["auto", "webp", "avif"]}
+              src="../images/github-mark.png"
+              width={28}
+              height={28}
+              quality={95}
+              alt="Github Link"/>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/minsuh-jo/">
+            <StaticImage
+              className="bio-link-icon"
+              layout="fixed"
+              formats={["auto", "webp", "avif"]}
+              src="../images/linkedin-logo.png"
+              width={28}
+              height={28}
+              quality={95}
+              alt="Linkedin Link"/>
+          </a>
+        </div>
+      </div>
     </div>
   )
 }
