@@ -141,9 +141,9 @@ module.exports = {
           },
           {
             name: `Elice Digital Coding`,
-            file: `https://cdn-front-door.elice.io/font/static/f/digitalcoding/700/EliceDigitalCoding.ttf`
+            // file: `https://cdn-front-door.elice.io/font/static/f/digitalcoding/700/EliceDigitalCoding.ttf`
             // file: `https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2`
-            // file: `https://font.elice.io/css?family=Elice+Digital+Coding`
+            file: `https://font.elice.io/css?family=Elice+Digital+Coding`
           }
         ]
       }
