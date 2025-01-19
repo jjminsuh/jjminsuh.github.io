@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Jan 2025 09:10:46 GMT</lastBuildDate><item><title><![CDATA[Github Pages와 Gatsby로 개발 블로그 만들기]]></title><description><![CDATA[언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다. 어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages…]]></description><link>https://jjminsuh.github.io/1/</link><guid isPermaLink="false">https://jjminsuh.github.io/1/</guid><pubDate>Tue, 14 Jan 2025 16:50:03 GMT</pubDate><content:encoded>&lt;p&gt;언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 19 Jan 2025 11:13:09 GMT</lastBuildDate><item><title><![CDATA[Github Pages와 Gatsby로 개발 블로그 만들기]]></title><description><![CDATA[언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다. 어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages…]]></description><link>https://jjminsuh.github.io/1/</link><guid isPermaLink="false">https://jjminsuh.github.io/1/</guid><pubDate>Tue, 14 Jan 2025 16:50:03 GMT</pubDate><content:encoded>&lt;p&gt;언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.&lt;/p&gt;
 &lt;p&gt;어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages 활용해서 웹 호스팅을 하고 블로그를 올리기로 마음먹었습니다.&lt;/p&gt;
 &lt;p&gt;깃 블로그 관련 자료를 찾아보다보니까 대부분 jekyll로 블로그를 만드는 걸 보고 나도 이렇게 해봐야겠다고 생각하던 중 Gatsby를 발견했습니다. (사실 Ruby를 install하는 도중에 이것저것 검색하다가 발견했습니다.)&lt;/p&gt;
 &lt;p&gt;특히 올리브영 기술블로그에 있던 아래의 글을 보고 Gatsby에 대해서 알게 되었습니다.&lt;/p&gt;
@@ -288,4 +288,237 @@
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;를 실행하면 바로 수정사항이 내 블로그 페이지에 적용된다는 것을 확인할 수 있습니다!&lt;/p&gt;
 &lt;p&gt;이제 수정사항은 &lt;code class=&quot;language-text&quot;&gt;dev-blog&lt;/code&gt; 브랜치에서 관리하고 &lt;code class=&quot;language-text&quot;&gt;deploy&lt;/code&gt; 명령어를 통해 바로 변경사항을 관리할 수 있게 되었습니다.&lt;/p&gt;
-&lt;p&gt;이제 기본 템플릿 블로그를 바탕으로 내가 원하는대로 블로그를 꾸며나가는 과정만 남았습니다. 블로그 홈 페이지 수정, 태그 및 카테고리 설정, 블로그 글 가독성을 위한 디자인 수정 등등 차차 다뤄보도록 하겠습니다.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;이제 기본 템플릿 블로그를 바탕으로 내가 원하는대로 블로그를 꾸며나가는 과정만 남았습니다. 블로그 홈 페이지 수정, 태그 및 카테고리 설정, 블로그 글 가독성을 위한 디자인 수정 등등 차차 다뤄보도록 하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Android] ViewModel 활용하기]]></title><description><![CDATA[…]]></description><link>https://jjminsuh.github.io/2/</link><guid isPermaLink="false">https://jjminsuh.github.io/2/</guid><pubDate>Tue, 07 Jun 2022 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;* 과거에 제가 네이버 블로그에 작성했던 글을 가져왔습니다.&lt;/p&gt;
+&lt;p&gt;인턴을 마치고 이전부터 안드로이드 앱으로 만들어보고 싶었던 프로젝트를 시작했다.&lt;/p&gt;
+&lt;p&gt;프로젝트를 진행하면서 공부한 기술 스택들을 정리해 보려고 한다.&lt;/p&gt;
+&lt;p&gt;사실 어느 정도 프로젝트를 진행한 상태에서 블로그 글을 쓰고 있어서 앞으로 쓰는 내용에서 코드가 중간중간 빠져있을 수도 있고, 주제와 관련 없는 다른 내용이 막 섞여있을 수도 있을 것 같다.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;아무튼 첫 번째 주제는 ViewModel 활용하기이다.&lt;/p&gt;
+&lt;p&gt;이전에 안드로이드 앱을 개발할 때에는 Activity나 Fragment 클래스에 무작정 모든 코드를 다 넣는 방식으로 코딩을 했다.&lt;/p&gt;
+&lt;p&gt;이렇게 하면 Activity와 Fragment가 거대해지고,&lt;/p&gt;
+&lt;p&gt;(더 복잡한 앱을 개발하다 보면 코드가 엄청 길어지고 복잡해질 것이다.)&lt;/p&gt;
+&lt;p&gt;결국 코드의 유지 보수가 어려워질 것이다.&lt;/p&gt;
+&lt;p&gt;그래서 App Achitecture라는 것이 필요하고, MVVM을 적용해 보기로 했다.&lt;/p&gt;
+&lt;p&gt;(이를 구현하기 위해 ViewModel을 활용하고자 한다!)&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;우선 MVVM의 개념을 간단히 정리해 보자면&lt;/p&gt;
+&lt;p&gt;MVVM - Model, View, ViewModel의 약자이다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Model에서는 데이터를 준비한다. (예를 들어 DB API 등을 관리하는 역할)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ViewModel에서는 데이터를 읽고 수정하는 일들을 처리한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;View에서는 UI에 데이터를 띄워주는 역할을 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;즉, ViewModel에서는 데이터를 읽고 수정하고,&lt;/p&gt;
+&lt;p&gt;View의 역할을 하는 Fragment나 Activity에서는 ViewModel의 데이터를 observing 하고 있다가 변화가 감지되면 이를 UI에 적용하는 방식이다.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;이것저것 자료를 찾아보고 안드로이드에서 제공하는 ViewModel을 활용하여 MVVM의 ViewModel로 사용하고자 했다. (아래는 ViewModel에 대한 내용을 정리한 Android Developers 문서이다.)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture/viewmodel?hl=ko&quot;&gt;https://developer.android.com/topic/libraries/architecture/viewmodel?hl=ko&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;사실 이 ViewModel은 이전에 Bottom Navigation이 구현되어 있는 프로젝트를 만들 때 기본으로 구현되어 있는 것을 본 적이 있었다.(하지만 그때는 제대로 사용하지 못했다.)&lt;/p&gt;
+&lt;p&gt;이번 프로젝트도 기본으로 제공되는 형태의 하단 탭을 사용하기 위해서 Bottom Navigation Activity로 기본 프로젝트를 생성했다.&lt;/p&gt;
+&lt;p&gt;아래 사진처럼 처음 프로젝트를 생성할 때 Bottom Navigation Activity를 클릭하고 Next를 눌러서 프로젝트를 생성하면&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/16449ead89f8795ef134c56ea8ea8eff/612f7/new_project_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACq0lEQVR42m1SXUgUURjd13qI3iIIIjAz3TV1Z3d2dv7uzM7srruGEv5sRkI/CIaRZUq6RWlk9lJha60b/iC9FPRiakkQ1UtPaYWQGi5ZT0Fv1UOwcPruJUHQgcMMd8493/nO93nsuAvbcWBaFth/GIzBsCIwbQc6s2E5UQRCYXR2dWN6ZhYPsiPEscX/bDaH6akZdHRcQFBR4fGFLJSrEXjpXSozHCT4QiYYkZ1YNWw3BjeewKEqCaPjE+DPaj4vxPi/r2tr4iyby4minrJwBD7VEUIHAiaKCV7ZhG5aiETjQpRFXFQFZNwdyuD3n1949zIjOuDn8+8/4NtyHhfPnodKdzyOG4UbjcEwGUxmCRiEsG5CkhUBRdNF6xpdMEQMDJrBxBl3apKwYcdEAY9OlTiJqwsQSVENGIkk4sN3EMvdA2tuRlgKIdLehtrxEUQH+gSP59jZlkGufxAnm2KQNXKoGiRC4NWFAyJJlEV901EUCgWRz6XeyygqKcXExCR+oICPKyuweMYUyaeVJfzEX+Qyt1AhBeFZF1oHb4OH27BBsKc3jf0lZRgfH8Pjhc94Nb8EhzYjkTyM2bdv8HTxO0bHJlHhlzYLaiSoqjoqo7W48rADQ4/aEWhqQVWFH9cHbmJ16QutyTR0MRQHz5/NIr+4jGtX++CnvDc7JMgaQ1GAYWe5jB2+IPb6DQRUGpRholLVEKSBcS4fiJ++vZS5ymdB2NJhmBy6dXXomptC9+sXqDl9Cqokw3uiBdtu92PPjbTgKSyC3SP92DU3jOJzrTAUbesM+cZvHEpXTy+k8krsa2+F5/4gtg+QoGXDb7pwn6RxZiGN0u5WaEF1C4d8dWjHeDt19Y040piCTdNUqbWQ4yKYTEKpjkNLpKDVHIfZkIKSOgYlFodumPgH7efxKIxscLMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;New Project&quot;
+        title=&quot;&quot;
+        src=&quot;/static/16449ead89f8795ef134c56ea8ea8eff/f058b/new_project_image.png&quot;
+        srcset=&quot;/static/16449ead89f8795ef134c56ea8ea8eff/c26ae/new_project_image.png 158w,
+/static/16449ead89f8795ef134c56ea8ea8eff/6bdcf/new_project_image.png 315w,
+/static/16449ead89f8795ef134c56ea8ea8eff/f058b/new_project_image.png 630w,
+/static/16449ead89f8795ef134c56ea8ea8eff/612f7/new_project_image.png 773w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;아래와 같이 각 탭에 대한 pakage가 생성되고, 그 아래에 Fragment와 ViewModel 클래스가 만들어진다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 375px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/276ab12bf88f62c200f11b4f7fd12341/5ff7e/project_file_tree_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 88.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAACAUlEQVR42p2UW4+bMBSE87Mawp2AjbFx7mWTSFupfaraPvT/S9M5hlSb1bIb7cMJmMQfc+aMs4izAkVZIe5PSP3XcJ/kXPP5Z2ohH3lBiNujOlzgNztk5ZrQkj8ow3W8L/7f39azwBUry3LotsPw/ANVraCMRdd7WL9B2zl0foueLzOuD88zdrJKZ4ABmuZIizXWqiX0O2rC5dlq+m5UWDym8GWlbF9R0f7pSpWOahtUjQ4loBv8YaBsEqjd7GEOA/T2wJZtaPumLkBnwIu331RiuYw4+QF2+AmlW2gCW0v/6KFxHqbfoKT6KMk+BopvURQh2ZzhLr8J1AEigzKECrwjUK7jcPL3W5bYtNyg/JGTvaChwkqNPla1DoNbq/H6ekCzwO3pjG5/wtp0KKo6tBamPpWsX7c73zLzFdHDxD/BnX9BU6GxHtr2IYeKkXp4yreSoaTbK9z1Dxo1Bj0MhVaIn9L+WxGajU3LTTWPo/Ojh6Jq9G4sseFhoHi4G66wuwOU7SZlnjFRWMYpVkk+G/D5HH5ZIpbYsGXN2Ih/0vbYugtVa4M0BP0jYEIVcYyUkemZw9aY4F07ZVAGY7nuxBba8W4OYzle7oi84hm2O/T7b9CMTqO7KYfqLo9iwx0wKQh4UauyhH3+i93xSlXiH9V5+tdwI//i4ryYKp+quNv/Dw5eg2z7SQFSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Project File Tree&quot;
+        title=&quot;&quot;
+        src=&quot;/static/276ab12bf88f62c200f11b4f7fd12341/5ff7e/project_file_tree_image.png&quot;
+        srcset=&quot;/static/276ab12bf88f62c200f11b4f7fd12341/c26ae/project_file_tree_image.png 158w,
+/static/276ab12bf88f62c200f11b4f7fd12341/6bdcf/project_file_tree_image.png 315w,
+/static/276ab12bf88f62c200f11b4f7fd12341/5ff7e/project_file_tree_image.png 375w&quot;
+        sizes=&quot;(max-width: 375px) 100vw, 375px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;여기서 각 클래스의 코드를 확인해 보면 ViewModel에서 text를 설정하고, Fragment에서 이를 관찰하여 화면에 띄우는 방식으로 구현이 되어있다. (사실 이것이 ViewModel을 활용하는 방식이다.)&lt;/p&gt;
+&lt;p&gt;아무튼 이것은 가장 처음에 기본적으로 만들어지는 형태이고,&lt;/p&gt;
+&lt;p&gt;이 코드를 기반으로 나의 프로젝트에 맞게 일단 탭의 이름을 바꾸고 수정을 해주었다.&lt;/p&gt;
+&lt;p&gt;(아래부터는 이번 프로젝트의 코드를 가져왔다.)&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;우선 ViewBinding을 활용하기 위해서 gradle 설정을 해주었다.&lt;/p&gt;
+&lt;p&gt;module 단의 gradle 파일에 다음의 코드를 추가했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;gradle&quot;&gt;&lt;pre class=&quot;language-gradle&quot;&gt;&lt;code class=&quot;language-gradle&quot;&gt;android &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;
+    buildFeatures &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        viewBinding &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/view-binding?hl=ko&quot;&gt;https://developer.android.com/topic/libraries/view-binding?hl=ko&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ViewBinding 관련한 자세한 내용은 위의 링크에서 확인할 수 있다.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;각 탭마다 방식은 같기 때문에 Home 탭의 코드를 가지고 기록을 해보려 한다.&lt;/p&gt;
+&lt;p&gt;Home 탭에서 내가 설정한 관심 있는 경기장의 정보를 띄워주는 부분이 있다. 이 부분의 데이터를 띄우는 방식을 예시로 작성을 해보고자 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 365px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5ab7a030284e10c066a5555937915978/2e8d1/model_folder_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVR42p1Sy1LDMAzsX8G0cfxIHDu2E9KWtpTS4QADd24MH79IJu2EDpdy2JGsxOtdSTNT1ZBxQHF4R914KDrPhcSiVGfMS5kxrZ1QSJ3BuaosZoIOonJQd1tsHo+oXQtpKui6IbgxNjCWcwtdjch1C6HMb0JOSm3ASpe7A9KwQps6uJAQuwGh68/wVMuIHULqkfoBytRENiHM7CybX6Lien/EsNnDOk81jduFyC2Yi3KMU6ifu/KC8ASWz3a61QbrhydUZMv6NtdZxfTfS/xJeCKtfUBY3sOu99mqpv5JsvYvwvyxELgxFun1C84ntGP/+DG2ejWh4JWwHvH5AyESWUxwbaRh9Rk8xKsIC244rUx8+UQbOniaesOENF1el6sVSl2hoItx+0aWIxwpbCg2bUBJOzpd6Mv+fwM0zmQs9L7bjgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Model Folder&quot;
+        title=&quot;&quot;
+        src=&quot;/static/5ab7a030284e10c066a5555937915978/2e8d1/model_folder_image.png&quot;
+        srcset=&quot;/static/5ab7a030284e10c066a5555937915978/c26ae/model_folder_image.png 158w,
+/static/5ab7a030284e10c066a5555937915978/6bdcf/model_folder_image.png 315w,
+/static/5ab7a030284e10c066a5555937915978/2e8d1/model_folder_image.png 365w&quot;
+        sizes=&quot;(max-width: 365px) 100vw, 365px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;우선 프로젝트 파일 아래 data 패키지를 만들고, model 패키지 아래에 StadiumInfo라는 data class를 만들었다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;StadiumInfo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; stadiumName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; stadiumAddress&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; stadiumPhone&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HomeViewModel에서는 다음과 같이 변수와 함수들을 정의해 주었다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@HiltViewModel&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; HomeViewModel &lt;span class=&quot;token annotation builtin&quot;&gt;@Inject&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ViewModel&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; _interestStadium &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; MutableLiveData&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;StadiumInfo&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; interestStadium&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; LiveData&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;StadiumInfo&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; _interestStadium
+
+    &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;loadInfo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        _interestStadium&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;StadiumInfo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;수원 KT 소닉붐 아레나&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;주소&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;전화번호&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ViewModel에서는 _interestStadium의 value를 설정해 주고,&lt;/p&gt;
+&lt;p&gt;(원래는 DB에서 값을 가져와야 하지만 일단은 dummy data를 넣어주었다.)&lt;/p&gt;
+&lt;p&gt;이후 Fragment에서는 아래와 같이 LiveData 타입인 interestStadium을 observe 하는 형태이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@AndroidEntryPoint&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; HomeFragment &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Fragment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;lateinit&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; homeViewModel&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; HomeViewModel
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; _binding&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; FragmentHomeBinding&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; binding &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; _binding&lt;span class=&quot;token operator&quot;&gt;!!&lt;/span&gt;
+
+    &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;onCreateView&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        inflater&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; LayoutInflater&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        container&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; ViewGroup&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        savedInstanceState&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Bundle&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; View&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        homeViewModel &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ViewModelProvider&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;HomeViewModel&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;java&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+        _binding &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; FragmentHomeBinding&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;inflater&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; container&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; binding&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;root
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;onViewCreated&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;view&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; View&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; savedInstanceState&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Bundle&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;onViewCreated&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;view&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; savedInstanceState&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;loadData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;renderUi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;loadData&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        homeViewModel&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;loadInfo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;renderUi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation builtin&quot;&gt;@SuppressLint&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;SetTextI18n&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;homeViewModel&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+            interestStadium&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;viewLifecycleOwner&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Observer &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                binding&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stadiumName&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; it&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stadiumName
+                binding&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stadiumAddress&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; it&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stadiumAddress
+                binding&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stadiumPhoneNum&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; it&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stadiumPhone
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;token operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;onDestroyView&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;onDestroyView&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        _binding &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(다른 변수들에 대한 코드들은 ...으로 생략해서 적어놓았다.)&lt;/p&gt;
+&lt;p&gt;HomeFragment의 observe 함수에서는 위에서 ViewModel에 정의한 interestStadium 변수를 observe 하고,&lt;/p&gt;
+&lt;p&gt;변수의 값이 변한 것이 감지되면 경기장 정보를 띄우는 TextView의 text 값을 바꾸어 화면에서 내가 관심 있는 경기장 정보를 확인할 수 있도록 했다.&lt;/p&gt;
+&lt;p&gt;​&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 안드로이드에서 제공하는 ViewModel과 LiveData를 활용하여 데이터를 로드하는 부분은 ViewModel에서 담당하고, Fragment에서는 UI와 관련된 작업들만 할 수 있도록 구현할 수 있다.&lt;/p&gt;
+&lt;p&gt;이렇게 함으로써 코드의 복잡도도 줄일 수 있고, 나중에 코드를 다시 확인하거나 수정이 필요한 경우에도 더 쉽게 처리할 수 있을 것 같다.&lt;/p&gt;</content:encoded></item></channel></rss>
