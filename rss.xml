@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Mar 2025 01:30:29 GMT</lastBuildDate><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 1]]></title><description><![CDATA[첫 백엔드 개발에 도전했습니다. 간단한 주식 서비스를 실습으로 진행하면서 하나씩 정리해나가보려고 합니다. Java 공부를 하고 이어서 백엔드를 시도해보는거라 스프링부트 프레임워크를 활용했습니다. 스프링부트 프로젝트 만들기 우선 vscode IDE…]]></description><link>https://jjminsuh.github.io/3/</link><guid isPermaLink="false">https://jjminsuh.github.io/3/</guid><pubDate>Fri, 07 Mar 2025 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;첫 백엔드 개발에 도전했습니다.&lt;/p&gt;
-&lt;p&gt;간단한 주식 서비스를 실습으로 진행하면서 하나씩 정리해나가보려고 합니다.&lt;/p&gt;
-&lt;p&gt;Java 공부를 하고 이어서 백엔드를 시도해보는거라 스프링부트 프레임워크를 활용했습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Mar 2025 04:14:59 GMT</lastBuildDate><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 2]]></title><link>https://jjminsuh.github.io/4/</link><guid isPermaLink="false">https://jjminsuh.github.io/4/</guid><pubDate>Tue, 11 Mar 2025 19:00:03 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 1]]></title><description><![CDATA[첫 백엔드 개발을 경험해보았습니다. 그래서 SKALA 백엔드 과정에서 진행했던 간단한 주식 서비스 프로젝트를 단계별로 복습하면서 정리해나가보려고 합니다. Java 공부를 하고 이어서 백엔드를 시도해보는거라 JAVA…]]></description><link>https://jjminsuh.github.io/3/</link><guid isPermaLink="false">https://jjminsuh.github.io/3/</guid><pubDate>Fri, 07 Mar 2025 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;첫 백엔드 개발을 경험해보았습니다.&lt;/p&gt;
+&lt;p&gt;그래서 SKALA 백엔드 과정에서 진행했던 간단한 주식 서비스 프로젝트를 단계별로 복습하면서 정리해나가보려고 합니다.&lt;/p&gt;
+&lt;p&gt;Java 공부를 하고 이어서 백엔드를 시도해보는거라 JAVA와 스프링부트로 프로젝트를 개선해나가는 부분을&lt;/p&gt;
 &lt;h3&gt;스프링부트 프로젝트 만들기&lt;/h3&gt;
 &lt;p&gt;우선 vscode IDE를 활용해서 개발을 진행했습니다.&lt;/p&gt;
 &lt;p&gt;프로젝트 만들기에 앞서서 편의를 위해서 몇 가지 extention들을 깔아주었습니다.&lt;/p&gt;
@@ -35,7 +35,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;우선 저는 이 두 가지를 깔아주었습니다. (Java 관련 extention은 이미 깔려있는 상태였음!)&lt;/p&gt;
+&lt;p&gt;우선 이 두 가지를 깔아주었습니다. (Java 관련 extention은 이미 깔려있는 상태였음!)&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
