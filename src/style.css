@@ -343,6 +343,26 @@ a:focus {
   margin: var(--spacing-0);
 }
 
+.post-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.post-content {
+  padding-right: 20%;
+}
+
+section {
+  padding: var(--spacing-2);
+  flex-grow: 1;
+}
+
+.toc-container {
+  position: fixed;
+  right: 0;
+  width: 16%;
+}
+
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }

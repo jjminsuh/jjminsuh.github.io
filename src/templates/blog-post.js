@@ -22,10 +22,18 @@ const BlogPostTemplate = ({
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <div className="post-wrapper">
+          <div className="post-content">
+            <section
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+            />
+          </div>
+          {/* <div className="toc-container">
+            <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }}></div>
+          </div> */}
+        </div>
+
         <hr />
         <footer>
           <Bio />
@@ -92,6 +100,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
       }
+      fields {
+        slug
+      }
+      tableOfContents
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
