@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 19 Jan 2025 11:13:09 GMT</lastBuildDate><item><title><![CDATA[Github Pages와 Gatsby로 개발 블로그 만들기]]></title><description><![CDATA[언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다. 어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages…]]></description><link>https://jjminsuh.github.io/1/</link><guid isPermaLink="false">https://jjminsuh.github.io/1/</guid><pubDate>Tue, 14 Jan 2025 16:50:03 GMT</pubDate><content:encoded>&lt;p&gt;언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Mar 2025 01:30:29 GMT</lastBuildDate><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 1]]></title><description><![CDATA[첫 백엔드 개발에 도전했습니다. 간단한 주식 서비스를 실습으로 진행하면서 하나씩 정리해나가보려고 합니다. Java 공부를 하고 이어서 백엔드를 시도해보는거라 스프링부트 프레임워크를 활용했습니다. 스프링부트 프로젝트 만들기 우선 vscode IDE…]]></description><link>https://jjminsuh.github.io/3/</link><guid isPermaLink="false">https://jjminsuh.github.io/3/</guid><pubDate>Fri, 07 Mar 2025 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;첫 백엔드 개발에 도전했습니다.&lt;/p&gt;
+&lt;p&gt;간단한 주식 서비스를 실습으로 진행하면서 하나씩 정리해나가보려고 합니다.&lt;/p&gt;
+&lt;p&gt;Java 공부를 하고 이어서 백엔드를 시도해보는거라 스프링부트 프레임워크를 활용했습니다.&lt;/p&gt;
+&lt;h3&gt;스프링부트 프로젝트 만들기&lt;/h3&gt;
+&lt;p&gt;우선 vscode IDE를 활용해서 개발을 진행했습니다.&lt;/p&gt;
+&lt;p&gt;프로젝트 만들기에 앞서서 편의를 위해서 몇 가지 extention들을 깔아주었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/481b6ff9a42110f939062cbcc80b2dc3/be86f/springboot_extention_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABpklEQVR42nWSO3PaUBCFVabxTEa27r0SAiQjEQkkARIQRIw84TWAqLBTUaVz73+QKr1rF/mlJ9plNBMySXFGu/dxdvfT1aRUEIaEFBLGnYDneQjDEL7vIwgCzrvdLsemacIwDEgpIYS4Eq0ppaCR4eIc4vA6hH2vUHx5wPFYYr8/YLvdYrVaYbPZoCxLNm82m3AcB67rot1usyi3bZtNNbtt4dvPMb6/zxE/Orj3BhikGQZJwgZRFLGoQ1K/3+c8qfYpj+OY816vx6aauJOIFi4+nwIooaPz8ITBfIVJOkSaZXyoHvN/o+q6jvF4zAU0ZSroNwY+fritOKpKdPlykJiRiM2fqnn9a487TNYe8nMfQhlYLAqUFUPitlwumd16vcZkMuFvURTY7Xa8nqYpd39l2PJtPL/Ncf5VYHj08cnpYpZPeYSsGpmMRqMR5xQTszzPMZvNOCbRPvEmBDzy40uC8scUbijRyU+Yft1jmERVBxlfoMqNRoNlWRarjokxjU7FmOGFW8XDMiFuDTQ6AZyOXz2Ly9OgZ1Izq3/M36LO6Gyr1cJv3PsFrwAkhkcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Extentions&quot;
+        title=&quot;&quot;
+        src=&quot;/static/481b6ff9a42110f939062cbcc80b2dc3/f058b/springboot_extention_image.png&quot;
+        srcset=&quot;/static/481b6ff9a42110f939062cbcc80b2dc3/c26ae/springboot_extention_image.png 158w,
+/static/481b6ff9a42110f939062cbcc80b2dc3/6bdcf/springboot_extention_image.png 315w,
+/static/481b6ff9a42110f939062cbcc80b2dc3/f058b/springboot_extention_image.png 630w,
+/static/481b6ff9a42110f939062cbcc80b2dc3/be86f/springboot_extention_image.png 662w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;우선 저는 이 두 가지를 깔아주었습니다. (Java 관련 extention은 이미 깔려있는 상태였음!)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/7a4b2/spring_initializr_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 12.025316455696203%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAh0lEQVR42k3KTQuCQACEYX9ERtIpCDc/lkrbtVwIhKI1LeoWZYH3/v/1TSGiw8MwwzjTaEl+uJCYgjDNiVY989Nv/mKN+PL/BElOrLpfuiHWWyYzieNJw6h6E1Yt0j6IbYMsG+bHZ9cbxO6Gm51wdY2ragaqYpidu6wZmyuRfSH2d4KyxQs1H1iDQbcKLrTdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Spring Initializr&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/f058b/spring_initializr_image.png&quot;
+        srcset=&quot;/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/c26ae/spring_initializr_image.png 158w,
+/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/6bdcf/spring_initializr_image.png 315w,
+/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/f058b/spring_initializr_image.png 630w,
+/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/40601/spring_initializr_image.png 945w,
+/static/b9e08a1bdd8fa47bf05ff50b931c6ae3/7a4b2/spring_initializr_image.png 1240w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그럼 vscode 커맨드 팔레트에서 Spring Initializr가  뜨는 걸 확인할 수 있고, 저는 Maven Project로 생성을 진행했습니다.&lt;/p&gt;
+&lt;p&gt;Spring Initializr를 선택하면 이어서 스프링부트 버전, 언어, Group Id, Artifact Id, Package Type, Java Version, Dependencies를 설정하도록하는 창이 순서대로 나타납니다.&lt;/p&gt;
+&lt;p&gt;아래처럼 기본 세팅을 해주었습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Spring Boot Version&lt;/td&gt;
+&lt;td&gt;3.4.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Language&lt;/td&gt;
+&lt;td&gt;Java&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Group Id&lt;/td&gt;
+&lt;td&gt;com.example (default)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Artifact Id&lt;/td&gt;
+&lt;td&gt;이름 설정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Package Type&lt;/td&gt;
+&lt;td&gt;Jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Java Version&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이렇게 세팅을 해준 후 dependency는&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring Web&lt;/li&gt;
+&lt;li&gt;Lombok&lt;/li&gt;
+&lt;li&gt;Spring Boot DevTools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;를 기본으로 설정해주었습니다. (dependency는 프로젝트 진행하면서 pom.xml에 계속 추가가 가능하기 때문에 필요한게 생기면 더 추가해주면 됩니다!)&lt;/p&gt;
+&lt;p&gt;저장 위치까지 지정해주면 스프링 부트 프로젝트가 바로 생성됩니다.&lt;/p&gt;
+&lt;p&gt;기본 프로젝트의 폴더 구조를 살펴보면 아래 사진처럼 구성되는 것을 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 584px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1b2746249d58c6df60f18dc883f25e53/e05eb/springboot_init_folders_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 113.29113924050634%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAACcklEQVR42p1U2XLiQAzkF8LhsY3Bt42P+D6CKZJaslW7L/v/n9MrKYGwD1uF89CFLOS2pO6ZhaHrsLZbNE2Hw+GALE0EulLfwkJ3ImzdCO10QVqPSOoeaTXApJza+7OxUF4Ky/YwnIiw6lG0A46vF7z9/A3LDaFtbSjLeRgLww5h2AE6IsybF8KIfZBITuev7rxZWJi6oh2aKIoCTV0jz1IYlFPaRn4FSvuK76E+8fmsU91CJ1G2JEoYRujHCWmW4fL+jiiKsFwusdlsCBpWqxVW67WAc/zMeY7XktOgsSiGYcA0t3AcW5R+fi5QlgXi+CCqM8IwRJ7nN/BzVVXyUQbngiDAfr//IOQOdzsLRVlRYY2ua4n4GTWtoCxLeeF4PGKaJozjKP9x3LYt+r7HMAxSmyTJPeGOkh2quqVOGynsuk5e5Boen8dc/zPy5hZrmgZ1HZkJfT9ATSOLOETo+z5s24bneUL4P7AG9/GXKEGIkYiyPJNRuOD6Va55FNLhnsbtT68oqob20eN8PsN13dsoswhNItxQ8HbwUQYeqqaVvfHorDCryBM82qkQLjWFX66BxrXQkoovBB6biU+nk+xyHqHS8Scw0BFh2XZE8mEPtgurOmePskN2eO7HOHgBJupoIs9dfTVnf5+EJp3bNezsB5yooHEHUjoXDzIp++xqicc7pB0mcYgoDEiMUkzNQjw9PX2nww+/pRmdUVKU1eVzysZm61iWNZ9Q0bUT0WXgk7l5TB6XTwurzBfBHC/eREkcC2nooSUyvhDYNkzGO5zfIQWOZcKnK4wFieNYFHYc53tHjwN+kTu93iCMuceOCf8C+0hyy6qcqXgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Initial Folders&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1b2746249d58c6df60f18dc883f25e53/e05eb/springboot_init_folders_image.png&quot;
+        srcset=&quot;/static/1b2746249d58c6df60f18dc883f25e53/c26ae/springboot_init_folders_image.png 158w,
+/static/1b2746249d58c6df60f18dc883f25e53/6bdcf/springboot_init_folders_image.png 315w,
+/static/1b2746249d58c6df60f18dc883f25e53/e05eb/springboot_init_folders_image.png 584w&quot;
+        sizes=&quot;(max-width: 584px) 100vw, 584px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;src/main/java/com/example/프로젝트이름 폴더 아래에 있는 SpringBootApplication Java 파일을 실행시키면 스프링부트 프로젝트가 성공적으로 실행되는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bf048066ce5d24dd320dc380f758e51a/d544a/springboot_start_log_image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 3.164556962025316%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAR0lEQVR42h3Juw3AIAxAwWwBHURyPgiwLSjYf7IXheKqO3Q4MjqrLawZZoa7b7135pzUWlHVfSJCypmQTqI8hLsQf1chvI0PtzQdrGUHZlgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Start Log&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bf048066ce5d24dd320dc380f758e51a/f058b/springboot_start_log_image.png&quot;
+        srcset=&quot;/static/bf048066ce5d24dd320dc380f758e51a/c26ae/springboot_start_log_image.png 158w,
+/static/bf048066ce5d24dd320dc380f758e51a/6bdcf/springboot_start_log_image.png 315w,
+/static/bf048066ce5d24dd320dc380f758e51a/f058b/springboot_start_log_image.png 630w,
+/static/bf048066ce5d24dd320dc380f758e51a/40601/springboot_start_log_image.png 945w,
+/static/bf048066ce5d24dd320dc380f758e51a/78612/springboot_start_log_image.png 1260w,
+/static/bf048066ce5d24dd320dc380f758e51a/d544a/springboot_start_log_image.png 1950w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 실행되었다는 로그가 뜨면 성공적으로 실행이 되었다는 의미이다.&lt;/p&gt;
+&lt;h3&gt;IDE Formatting 설정&lt;/h3&gt;
+&lt;p&gt;마지막으로 코드 포매팅을 위한 IDE 설정을 추가하려고 합니다.&lt;/p&gt;
+&lt;p&gt;프로젝트 폴더 중 .vscode 폴더에 들어가면 settings.json 파일을 찾을 수 있습니다.&lt;/p&gt;
+&lt;p&gt;해당 파일에 아래와 같은 코드를 추가 하면 저장을 하는 순간 vscode에서 자동으로 코드 formatting을 해주는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;java.compile.nullAnalysis.mode&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;automatic&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;token property&quot;&gt;&quot;java.format.settings.url&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;eclipse-formatter.xml&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 저장할 때 코드 포맷 자동 정리&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;editor.codeActionsOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;source.organizeImports&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;always&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 필요한 클래스 import 문장 자동 추가/삭제&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;[java]&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;editor.tabSize&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 탭 크기 설정 (기본값 4)&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;editor.insertSpaces&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 탭 대신 공백 사용&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 저장 시 자동 포맷팅&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;java.configuration.updateBuildConfiguration&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;interactive&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 스프링부트 프로젝트르르 개발하기 위한 준비가 완료되었습니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Github Pages와 Gatsby로 개발 블로그 만들기]]></title><description><![CDATA[언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다. 어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages…]]></description><link>https://jjminsuh.github.io/1/</link><guid isPermaLink="false">https://jjminsuh.github.io/1/</guid><pubDate>Tue, 14 Jan 2025 16:50:03 GMT</pubDate><content:encoded>&lt;p&gt;언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.&lt;/p&gt;
 &lt;p&gt;어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages 활용해서 웹 호스팅을 하고 블로그를 올리기로 마음먹었습니다.&lt;/p&gt;
 &lt;p&gt;깃 블로그 관련 자료를 찾아보다보니까 대부분 jekyll로 블로그를 만드는 걸 보고 나도 이렇게 해봐야겠다고 생각하던 중 Gatsby를 발견했습니다. (사실 Ruby를 install하는 도중에 이것저것 검색하다가 발견했습니다.)&lt;/p&gt;
 &lt;p&gt;특히 올리브영 기술블로그에 있던 아래의 글을 보고 Gatsby에 대해서 알게 되었습니다.&lt;/p&gt;
