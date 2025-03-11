@@ -61,7 +61,7 @@ src/main/java/com/example/프로젝트이름 폴더 아래에 있는 SpringBootA
 
 프로젝트 폴더 중 .vscode 폴더에 들어가면 settings.json 파일을 찾을 수 있습니다.
 
-해당 파일에 아래와 같은 코드를 추가 하면 저장을 하는 순간 vscode에서 자동으로 코드 formatting을 해주는 것을 확인할 수 있다.
+해당 파일에 아래와 같은 코드를 추가 하면 저장을 하는 순간 vscode에서 자동으로 코드 formatting을 해주는 것을 확인할 수 있습니다.
 
 ```json
 {

@@ -225,6 +225,14 @@ table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
+.gatsby-highlight {
+  min-width: 0;
+}
+
+section {
+  flex-grow: 1;
+}
+
 /* Link */
 
 a {
@@ -237,6 +245,13 @@ a:focus {
 }
 
 /* Custom classes */
+/* 코드 블럭 스타일 수정 */
+pre {
+  white-space: pre-wrap; /* 자동 줄바꿈 허용 */
+  word-break: break-word; /* 긴 단어도 줄바꿈 가능 */
+  overflow-x: auto; /* 가로 스크롤 허용 */
+  max-width: 100%; /* 컨테이너 크기 초과 방지 */
+}
 
 .global-wrapper {
   margin: var(--spacing-0) auto;
@@ -260,6 +275,7 @@ a:focus {
 }
 
 .main-wrapper {
+  width: 100%;
   padding: var(--spacing-0) var(--spacing-4);
 }
 
@@ -340,22 +356,24 @@ a:focus {
 }
 
 .blog-post-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
   margin: var(--spacing-0);
 }
 
 .post-wrapper {
   display: flex;
   align-items: flex-start;
+  width: 100%;
   max-width: 980px;
 }
 
 .post-content {
   padding-right: 20%;
-}
-
-section {
-  padding: var(--spacing-2);
-  flex-grow: 1;
+  width: 100%;
 }
 
 .toc-container {
@@ -444,5 +462,4 @@ section {
   .post-content {
     padding-right: var(--spacing-0);
   }
-
 }

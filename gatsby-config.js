@@ -52,7 +52,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-", // 코드블럭에 언어 클래스 추가
+              showLineNumbers: true, // 줄 번호 표시
+              noInlineHighlight: false, // 인라인 코드 하이라이트 활성화
+            },
+          },
         ],
       },
     },
