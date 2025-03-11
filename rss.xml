@@ -1,4 +1,160 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Mar 2025 04:14:59 GMT</lastBuildDate><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 2]]></title><link>https://jjminsuh.github.io/4/</link><guid isPermaLink="false">https://jjminsuh.github.io/4/</guid><pubDate>Tue, 11 Mar 2025 19:00:03 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 1]]></title><description><![CDATA[첫 백엔드 개발을 경험해보았습니다. 그래서 SKALA 백엔드 과정에서 진행했던 간단한 주식 서비스 프로젝트를 단계별로 복습하면서 정리해나가보려고 합니다. Java 공부를 하고 이어서 백엔드를 시도해보는거라 JAVA…]]></description><link>https://jjminsuh.github.io/3/</link><guid isPermaLink="false">https://jjminsuh.github.io/3/</guid><pubDate>Fri, 07 Mar 2025 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;첫 백엔드 개발을 경험해보았습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 11 Mar 2025 04:48:46 GMT</lastBuildDate><item><title><![CDATA[[SKALA] SKALA 2월 회고]]></title><description><![CDATA[3월 첫 주에 Java, SpringBoot 수업을 들으면서 실습한 내용들을 블로그에 정리해보면 좋겠다는 생각에 묵혀두었던 블로그를 금요일에 다시 꺼내보았다. 그런데 마침…]]></description><link>https://jjminsuh.github.io/4/</link><guid isPermaLink="false">https://jjminsuh.github.io/4/</guid><pubDate>Tue, 11 Mar 2025 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;3월 첫 주에 Java, SpringBoot 수업을 들으면서 실습한 내용들을 블로그에 정리해보면 좋겠다는 생각에 묵혀두었던 블로그를 금요일에 다시 꺼내보았다.&lt;/p&gt;
+&lt;p&gt;그런데 마침 4월 이벤트로 포트폴리오 이벤트를 진행한다고 해서 방치되었던 블로그를 가꿔 보기로 다짐했다. (글도 쓰는 동시에 이것저것 디자인도 수정하고, 반응형으로 수정, 태그, 댓글 기능 추가 등등 기능 추가도 빠르게 해봐야겠다.)&lt;/p&gt;
+&lt;p&gt;아무튼 앞으로 SKALA에서 공부한 내용들을 잘 정리해서 기록해보려고 합니다.&lt;/p&gt;
+&lt;p&gt;첫 글로 무슨 내용을 쓸까 고민하다가 노션에 정리했던 2월 회고를 남겨봐야겠다고 생각했다.&lt;/p&gt;
+&lt;h3&gt;SKALA 소개&lt;/h3&gt;
+&lt;p&gt;일단 SKALA 첫 회고 글이니까 SKALA에 대해서 간단히 소개하면&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SK C&amp;#x26;C 채용연계형 AI 서비스 개발 과정&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이다.&lt;/p&gt;
+&lt;p&gt;교육 과정이나 다양한 혜택에 관련된 내용은 아래 사이트에서 찾아볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://skala.co.kr/&quot;&gt;https://skala.co.kr/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;과정은 SW Fundamental, Data AI, AI Team Project, 특강으로 이루어져 있다.&lt;/p&gt;
+&lt;p&gt;기초 SW 관련 내용과 데이터분석, AI관련 강의를 우선 진행하고 이후에 프로젝트를 진행하는 형식으로 진행된다.&lt;/p&gt;
+&lt;h3&gt;2월 교육 회고&lt;/h3&gt;
+&lt;p&gt;2월은 주로 클라우드와 데이터분석 기초 주제들에 대한 강의들을 들었다.(공부한 구체적인 내용에 대해서는 앞으로 조금씩 정리를 해보려고 한다.)&lt;/p&gt;
+&lt;p&gt;오랜만에 하루에 8시간씩 강의를 듣는거라 처음에는 조금 피곤했었는데 이제는 조금 익숙해졌다.&lt;/p&gt;
+&lt;p&gt;2월에 들었던 강의 중에 가장 기억에 남았던 내용은 생성형 AI 관련 강의였던 것 같다. 이전에 다른 곳에서 배우거나 다뤄본 적 없는 새로운 내용이라서 더 흥미로웠다. (드디어 그 유명한 Transformer에 대한 큰 흐름과 그림을 그릴 수 있었다..!)&lt;/p&gt;
+&lt;p&gt;2월 강의를 들으면서 가장 크게 느낀건 큰 흐름과 구조를 잘 정리하면서 공부를 해야겠다는 것이었다. 사실 학교 수업에서 클라우드 관련 수업을 들으면서 컨테이너, 쿠버네티스 관련 부분이 큰 그림이 잘 그려지지 않아서 조금 어려웠는데, SKALA에서 다시 내용을 들으면서 큰 그림을 그릴 수 있게 되었다. (+ 특히 같은 조원들이랑 대화하면서 수업 내용에 대해서 이야기 나누는 시간을 가졌던 것이 가장 큰 도움이 되었다. 그리고 조원분들이 질문을 많이 해주셨는데, 답변을 고민하고 표현해보니까 확실히 더 이해하는데 도움이 되었다. 이 자리를 빌어 감사인사를 전합니다 ☺️)&lt;/p&gt;
+&lt;p&gt;수료생이 된 이후에 작년 하반기에는 주로 혼자 공부를 했는데, 다른 사람들이랑 같이 공부하는게 확실히 더 재밌는 것 같다!&lt;/p&gt;
+&lt;p&gt;2월 마지막 특강 날에는 만다라트 만들기를 하면서 목표와 계획을 작성하는 활동도 진행했는데, 뭔가 나를 한 번 돌아보고 계획하는 시간이라 J 인간에게 매우 흥미로운 시간이었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e43a43d21eeeb34f8fb82b7e660c1f0e/beca7/mandalart.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 131.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEEAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAbN82WRg8lO9FZOV/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEQETECEv/aAAgBAQABBQJYjvS49Flwo//EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwEr/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/ASP/xAAUEAEAAAAAAAAAAAAAAAAAAAAw/9oACAEBAAY/Ak//xAAbEAADAAIDAAAAAAAAAAAAAAAAASEQMRFBgf/aAAgBAQABPyHqOCK8CcENjVQsU43Hs//aAAwDAQACAAMAAAAQOzcM/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAwEBPxAWL//EABcRAQADAAAAAAAAAAAAAAAAAAEAEBH/2gAIAQIBAT8Qjpv/xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMUEQUWGB8P/aAAgBAQABPxCgOwhsRfbMN+ZlFPE33EvbGGxqHFiVETMeg3kz/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Mandalart&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e43a43d21eeeb34f8fb82b7e660c1f0e/828fb/mandalart.jpg&quot;
+        srcset=&quot;/static/e43a43d21eeeb34f8fb82b7e660c1f0e/ff44c/mandalart.jpg 158w,
+/static/e43a43d21eeeb34f8fb82b7e660c1f0e/a6688/mandalart.jpg 315w,
+/static/e43a43d21eeeb34f8fb82b7e660c1f0e/828fb/mandalart.jpg 630w,
+/static/e43a43d21eeeb34f8fb82b7e660c1f0e/0ede0/mandalart.jpg 945w,
+/static/e43a43d21eeeb34f8fb82b7e660c1f0e/3ac88/mandalart.jpg 1260w,
+/static/e43a43d21eeeb34f8fb82b7e660c1f0e/beca7/mandalart.jpg 4055w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;구체적으로 쓰다보니까 생각보다 81개의 칸을 채우는 건 쉽지 않았다... 뭔가 실제 해야겠다고 생각한 내용들로 잘 채워보려고 했는데, 채우다보니 할 일이 정말 많다는 것을 깨달았다. 하나하나 차근차근 잘 지워나가보겠습니다!&lt;/p&gt;
+&lt;p&gt;아무튼 SKALA 과정을 시작하고 엄청 바빠졌다.(내맘대로 자유롭게 시간 쓰던 시절은 끝났으요..) 2월 한 달 지내보면서 시간 관리를 좀 잘해야겠다는 생각이 가장 크게 들었다.&lt;/p&gt;
+&lt;p&gt;하루에 두시간 반 정도 지하철에서 시간을 보내다보니까 시간 활용을 잘 할 수 있는 방법에 대해서 고민이 되기 시작했다.(통근, 통학하는 분들 존경합니다...)&lt;/p&gt;
+&lt;p&gt;2월 회고는 점심 사진들로 마무리!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d1f26b0cbad105239b53f2c5c7655342/6258c/lunch1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAHDkwrkA3//xAAbEAACAgMBAAAAAAAAAAAAAAABAhESAAMhBP/aAAgBAQABBQIcXlhljKsW9DmNn//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AYj/xAAaEAEBAAIDAAAAAAAAAAAAAAABACExETKx/9oACAEBAAY/Atbur7PBGbLIX//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExUXH/2gAIAQEAAT8hqI9N/fcAoeGt9ZZEQfMmBBHARYXG5QYZ/9oADAMBAAIAAwAAABCM7//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAEDAQE/EBhv/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFS9v//EABwQAQEAAgIDAAAAAAAAAAAAAAERACFBUWGxwf/aAAgBAQABPxCRRUV0jt8ygRAmLG2HrHYkSSR50pO55xShCQJRd41gEQ0STjHmAwIMId5//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Lunch1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d1f26b0cbad105239b53f2c5c7655342/828fb/lunch1.jpg&quot;
+        srcset=&quot;/static/d1f26b0cbad105239b53f2c5c7655342/ff44c/lunch1.jpg 158w,
+/static/d1f26b0cbad105239b53f2c5c7655342/a6688/lunch1.jpg 315w,
+/static/d1f26b0cbad105239b53f2c5c7655342/828fb/lunch1.jpg 630w,
+/static/d1f26b0cbad105239b53f2c5c7655342/0ede0/lunch1.jpg 945w,
+/static/d1f26b0cbad105239b53f2c5c7655342/3ac88/lunch1.jpg 1260w,
+/static/d1f26b0cbad105239b53f2c5c7655342/6258c/lunch1.jpg 2293w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/665f0d37985214a7221992d75e31dc62/6258c/lunch2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEA//EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/aAAwDAQACEAMQAAABSxQdJMZf/8QAGRABAQEAAwAAAAAAAAAAAAAAAQIAAxFB/9oACAEBAAEFAl73mFK46atupr//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFX/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BiP/EABkQAQEBAAMAAAAAAAAAAAAAAAEAITJxgf/aAAgBAQAGPwLJHy5T1bIN/8QAHhAAAgEDBQAAAAAAAAAAAAAAAAERIVFhMUFxgZH/2gAIAQEAAT8hcqW1d55FKoM3T6J5IhF6sioMlMRNj//aAAwDAQACAAMAAAAQMM//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEUH/2gAIAQMBAT8QuKf/xAAXEQADAQAAAAAAAAAAAAAAAAAAESEB/9oACAECAQE/EGwus//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQVFhkbH/2gAIAQEAAT8QN8gXb6UvbCtQh4Qg8DbtMBIQQQgWbY7N3WanvhXrxhThsKHbvI8g4If0z//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Lunch2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/665f0d37985214a7221992d75e31dc62/828fb/lunch2.jpg&quot;
+        srcset=&quot;/static/665f0d37985214a7221992d75e31dc62/ff44c/lunch2.jpg 158w,
+/static/665f0d37985214a7221992d75e31dc62/a6688/lunch2.jpg 315w,
+/static/665f0d37985214a7221992d75e31dc62/828fb/lunch2.jpg 630w,
+/static/665f0d37985214a7221992d75e31dc62/0ede0/lunch2.jpg 945w,
+/static/665f0d37985214a7221992d75e31dc62/3ac88/lunch2.jpg 1260w,
+/static/665f0d37985214a7221992d75e31dc62/6258c/lunch2.jpg 2293w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e3ba234b39a896357853879aae2a9fda/6258c/lunch3.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDAv/EABYBAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAABUXjO7DD/xAAbEAEAAgIDAAAAAAAAAAAAAAACARIAAxMxQf/aAAgBAQABBQJWz0i0NTzLrU1B/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BV//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAECAQE/AUv/xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhEDFBof/aAAgBAQAGPwKFFM60a9EprFM//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARIVFBcf/aAAgBAQABPyGhPQL7f2bWuQWJaCOlhkTiOjC+T//aAAwDAQACAAMAAAAQz9//xAAYEQACAwAAAAAAAAAAAAAAAAAAAREhcf/aAAgBAwEBPxBKbMn/xAAYEQEAAwEAAAAAAAAAAAAAAAABABFRIf/aAAgBAgEBPxB5RsVs/8QAHBABAAIDAQEBAAAAAAAAAAAAAREhADFBYVGR/9oACAEBAAE/EIF6FOEP6wiyApDQdPLnCG4SIseZaIbJoccE0Tqu4HQtsPD6Z//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Lunch3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e3ba234b39a896357853879aae2a9fda/828fb/lunch3.jpg&quot;
+        srcset=&quot;/static/e3ba234b39a896357853879aae2a9fda/ff44c/lunch3.jpg 158w,
+/static/e3ba234b39a896357853879aae2a9fda/a6688/lunch3.jpg 315w,
+/static/e3ba234b39a896357853879aae2a9fda/828fb/lunch3.jpg 630w,
+/static/e3ba234b39a896357853879aae2a9fda/0ede0/lunch3.jpg 945w,
+/static/e3ba234b39a896357853879aae2a9fda/3ac88/lunch3.jpg 1260w,
+/static/e3ba234b39a896357853879aae2a9fda/6258c/lunch3.jpg 2293w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 1]]></title><description><![CDATA[첫 백엔드 개발을 경험해보았습니다. 그래서 SKALA 백엔드 과정에서 진행했던 간단한 주식 서비스 프로젝트를 단계별로 복습하면서 정리해나가보려고 합니다. Java 공부를 하고 이어서 백엔드를 시도해보는거라 JAVA…]]></description><link>https://jjminsuh.github.io/3/</link><guid isPermaLink="false">https://jjminsuh.github.io/3/</guid><pubDate>Fri, 07 Mar 2025 19:00:03 GMT</pubDate><content:encoded>&lt;p&gt;첫 백엔드 개발을 경험해보았습니다.&lt;/p&gt;
 &lt;p&gt;그래서 SKALA 백엔드 과정에서 진행했던 간단한 주식 서비스 프로젝트를 단계별로 복습하면서 정리해나가보려고 합니다.&lt;/p&gt;
 &lt;p&gt;Java 공부를 하고 이어서 백엔드를 시도해보는거라 JAVA와 스프링부트로 프로젝트를 개선해나가는 부분을&lt;/p&gt;
 &lt;h3&gt;스프링부트 프로젝트 만들기&lt;/h3&gt;
@@ -198,7 +354,7 @@
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;&quot;java.configuration.updateBuildConfiguration&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;interactive&quot;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이제 스프링부트 프로젝트르르 개발하기 위한 준비가 완료되었습니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Github Pages와 Gatsby로 개발 블로그 만들기]]></title><description><![CDATA[언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다. 어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages…]]></description><link>https://jjminsuh.github.io/1/</link><guid isPermaLink="false">https://jjminsuh.github.io/1/</guid><pubDate>Tue, 14 Jan 2025 16:50:03 GMT</pubDate><content:encoded>&lt;p&gt;언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.&lt;/p&gt;
+&lt;p&gt;이제 스프링부트 프로젝트를 개발하기 위한 준비가 완료되었습니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Github Pages와 Gatsby로 개발 블로그 만들기]]></title><description><![CDATA[언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다. 어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages…]]></description><link>https://jjminsuh.github.io/1/</link><guid isPermaLink="false">https://jjminsuh.github.io/1/</guid><pubDate>Tue, 14 Jan 2025 16:50:03 GMT</pubDate><content:encoded>&lt;p&gt;언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.&lt;/p&gt;
 &lt;p&gt;어떤 플랫폼을 활용할까 고민해보다가 뭔가 제가 직접 커스텀 해보고 싶다는 생각이 들었고 Git Pages 활용해서 웹 호스팅을 하고 블로그를 올리기로 마음먹었습니다.&lt;/p&gt;
 &lt;p&gt;깃 블로그 관련 자료를 찾아보다보니까 대부분 jekyll로 블로그를 만드는 걸 보고 나도 이렇게 해봐야겠다고 생각하던 중 Gatsby를 발견했습니다. (사실 Ruby를 install하는 도중에 이것저것 검색하다가 발견했습니다.)&lt;/p&gt;
 &lt;p&gt;특히 올리브영 기술블로그에 있던 아래의 글을 보고 Gatsby에 대해서 알게 되었습니다.&lt;/p&gt;
