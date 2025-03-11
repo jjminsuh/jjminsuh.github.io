@@ -346,6 +346,7 @@ a:focus {
 .post-wrapper {
   display: flex;
   align-items: flex-start;
+  max-width: 980px;
 }
 
 .post-content {
