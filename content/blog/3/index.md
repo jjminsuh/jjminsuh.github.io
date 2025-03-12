@@ -52,7 +52,7 @@ src/main/java/com/example/프로젝트이름 폴더 아래에 있는 SpringBootA
 
 ![Start Log](./springboot_start_log_image.png)
 
-이렇게 실행되었다는 로그가 뜨면 성공적으로 실행이 되었다는 의미이다.
+이렇게 실행되었다는 로그가 뜨면 성공적으로 실행이 되었다는 것을 의미합니다.
 
 ### IDE Formatting 설정
 마지막으로 코드 포매팅을 위한 IDE 설정을 추가하려고 합니다.
