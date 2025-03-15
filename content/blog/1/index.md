@@ -144,7 +144,7 @@ brew unlink node
 프로젝트에서 node를 잠시 unlink 해줍니다.
 
 ```bash
-brew link —overwrite node@22
+brew link -—overwrite node@22
 ```
 
 앞에서 install 한 노드 버전으로 버전 변경해줍니다.
