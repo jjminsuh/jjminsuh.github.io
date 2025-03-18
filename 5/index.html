@@ -162,26 +162,26 @@
 <p>이런 식으로 구분을 하고, 역할을 계속 염두에 두며 코드를 작성했습니다.</p>
 <h4>주식 가격 실시간 업데이트 기능 추가</h4>
 <p>Timer와 TimerTask를 활용하여 해당 기능을 추가해줬습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">private void start() {
-	...생략...
+<div class="gatsby-highlight" data-language="java"><pre style="counter-reset: linenumber NaN" class="language-java line-numbers"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>생략<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 	
-	// 가격 변동 업데이트 위한 타이머
-  Timer timer = new Timer();
+	<span class="token comment">// 가격 변동 업데이트 위한 타이머</span>
+  <span class="token class-name">Timer</span> timer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  TimerTask task = new TimerTask() {
-      @Override
-      public void run() {
-          stockRepository.changeRandomStockPrice();
-          stockRepository.saveStock();
-      }
-  };
+  <span class="token class-name">TimerTask</span> task <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TimerTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token annotation punctuation">@Override</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          stockRepository<span class="token punctuation">.</span><span class="token function">changeRandomStockPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          stockRepository<span class="token punctuation">.</span><span class="token function">saveStock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
   
-  timer.scheduleAtFixedRate(task, 10000, 10000);
+  timer<span class="token punctuation">.</span><span class="token function">scheduleAtFixedRate</span><span class="token punctuation">(</span>task<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   
-  ...생략...
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>생략<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
   
-  timer.cancel();
-}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+  timer<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>이런식으로 <code class="language-text">start()</code> 함수에 타이머를 설정하여 프로그램이 실행되는 동안 특정시간 주기로 주식 가격을 업데이트 할 수 있도록 했습니다.</p>
 <p>우선 새 <code class="language-text">Timer</code> 객체를 정의하고 주기적으로 실행하고 싶은 task를 <code class="language-text">TimerTask</code> 객체로 만들어줍니다.</p>
 <p>이후 이 task를 <code class="language-text">scheduleAtFixedRate()</code>에 넘겨주면 해당 task를 설정한 주기마다 실행할 수 있게 됩니다.</p>
@@ -228,4 +228,4 @@ double 값: 0.10000000000000002</code><span aria-hidden="true" class="line-numbe
           >
             window.___chunkMapping="{\"app\":[\"/app-3a69bf6bb6b063e28c49.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-4e84e48fde2629f1b655.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ebc1fb35e17ff875c859.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b873f9b7c2e17e464ec6.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-def875e19c20dc3ed0d5.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="56dafcc605df21aaabcb";</script><script src="/webpack-runtime-4b79f9e32b798c7b81c2.js" async></script><script src="/framework-2108e58c9f80a6f5eb14.js" async></script><script src="/app-3a69bf6bb6b063e28c49.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="862ce2ddbb8e4eb01d7a";</script><script src="/webpack-runtime-4b79f9e32b798c7b81c2.js" async></script><script src="/framework-2108e58c9f80a6f5eb14.js" async></script><script src="/app-3a69bf6bb6b063e28c49.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
