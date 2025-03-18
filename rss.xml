@@ -1,4 +1,245 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 Mar 2025 14:04:21 GMT</lastBuildDate><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 2]]></title><description><![CDATA[스프링부트 코드를 정리하기 전에 주식 서비스 프로젝트가 어떤 식으로 이루어져 있는지 정리하는 과정이 필요해서 이 부분을 먼저 정리해보려 합니다. SKALA 과정에서 Java와 SpringBoot를 이어서 배웠기 때문에 Java…]]></description><link>https://jjminsuh.github.io/5/</link><guid isPermaLink="false">https://jjminsuh.github.io/5/</guid><pubDate>Fri, 14 Mar 2025 23:07:33 GMT</pubDate><content:encoded>&lt;p&gt;스프링부트 코드를 정리하기 전에 주식 서비스 프로젝트가 어떤 식으로 이루어져 있는지 정리하는 과정이 필요해서 이 부분을 먼저 정리해보려 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 Mar 2025 23:47:04 GMT</lastBuildDate><item><title><![CDATA[블로그 반응형으로 만들기]]></title><description><![CDATA[SKALA 포트폴리오 이벤트에 블로그를 제출하려고 보니 모바일 화면에서 레이아웃이 무너져 있는 것을 발견했습니다. 기본 Gatsby…]]></description><link>https://jjminsuh.github.io/6/</link><guid isPermaLink="false">https://jjminsuh.github.io/6/</guid><pubDate>Tue, 18 Mar 2025 14:18:18 GMT</pubDate><content:encoded>&lt;p&gt;SKALA 포트폴리오 이벤트에 블로그를 제출하려고 보니 모바일 화면에서 레이아웃이 무너져 있는 것을 발견했습니다. 기본 Gatsby 블로그 레이아웃에 사이드바를 추가하면서 반응형 처리를 하지 않은 것이 문제였습니다.&lt;/p&gt;
+&lt;p&gt;그런데 마침 프로그래밍 기초 과정에서 CSS media 쿼리에 대한 내용을 배웠고, 바로 적용해보자고 마음먹고 수정을 진행했습니다.&lt;/p&gt;
+&lt;p&gt;사이드 바를 도입할 때 사이드 바의 크기를 픽셀로 고정하고 남은 자리에 블로그 글(또는 목록)을 채울 수 있는 방식으로 구현했는데, 화면이 작아지는 경우 블로그 글에 할당되는 화면 크기가 너무 작아지는 것이 문제였습니다. (아쉽지만 무너진 레이아웃 캡쳐 화면이 없네요…)&lt;/p&gt;
+&lt;h3&gt;media query 적용하기&lt;/h3&gt;
+&lt;p&gt;우선 큰 그림을 그려보면 화면의 가로 크기가 작아지는 경우에는&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;홈에서는 프로필 정보를 블로그 글 목록 위쪽에 위치하도록&lt;/li&gt;
+&lt;li&gt;포스트 페이지에서는 프로필 정보가 보이지 않도록&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;설정하고자 했습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2fbef38a83dd8e8f42933fa503909bdf/46115/home_design_example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 216.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAIAAAD3xz8iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEWklEQVR42pVWWXPiRhDm5+chT1uVbOUltWSTvSqVTaj1fcQ2NsHY+MSY04AkdAtppNGFDucTAizf7FRLavX0N0cf05O7nbQwDEVRNE3z9vmGXugIglCv113XhSSXdnieV61WOY4DH8fxk+Bms9loNGq12m/5vGEYCRiq/ngMiuI4CMOUD4IQT/IOg5SBEEw0aRg74eM4R22XE+ShqOAN4mWtxwy3dorF0mGxVN7eLe7ul0qHxxBCh+UlTlAGnHhRbwOYw6j4zMixqEMsOtINg5gjnWgjXSembpimZVvotR2oQQdCLDP33A5fbQDm5hzelFLYDMbQdV1VVWxTkiRCCOQsy4KBJIu/BwZyeXl5Z2dnZWUFxhcEfmtzc3t7u9frFQqF1dVVDJF1R+6FdT34RyzA1E/MnN1JOjA8YojtsWtnxA+Hyz03J1EY6eRXIjbip1bx0rLjOLrY+7pdyF/vfRo7JBUtCkYLXEuXBc9SX/DWE2BYRZIVSVYFPJqOgAEtCoZh4Fh4VVU1VdMQXOSZbHt65t6ArV83RVFiWJZhWKxgkg6L7Rl5RG3b9zxCPdWw4/vufWXZeP+7UzyuHH4qsm+XWs/5KpeJjduUoglYllVDH7V464pJrAXhhKZM/Fp4vt4SMHHGPdlUTVcizoh6N7KpWS6jWjr1B6p1PdSbgtEY6pDjty0YxzeKYftTMLp/32//slX/+7j/49L5m7Xa53L3Y6lT7Slfj3v5Ygu9X8rdjUuuUB2Aye81byQyBdfY0V9HvfVL9n2x9Xaz/rncuZHM/aY4UBL3hlEMimapEWUSJAE7fiAbVDJsQacKcWTiWu4YCxuHUWrniSHv7H3PYI7tSKJIDENVVND3GQxHmeO4INfzXc/TdYPiKHRcQsyXT7jJzK4riHJKsqL2GZZPGI3h+GiyxWgaBfGiKbnosnnd3rxkt2rcYUeqcaPTvrJ2zuw3hZO+Uk9+1bULFlRs8KxGs+dCAob312vD5TNmo8bBQ7vX/LeTweoFu37JldpiuSPB2xDuNfjUeffAKHkjTbMpNQ0dpTD+PmsHgUWp548d14PBEwtFE5oGxpSPoocWS8CWRW/6jCjJ3JDv9RlVG2XybIaf2jx+lFVxHCYNFTT5LF69EjD1Ahic+oHpjB0/5Ea2Ow6QYQhbyLsSaQukJRjciCLVkFgXrAbNu8RAovy0cfXnYfeHwumbtcsPpfa7YrPSlf+p9t/tNd/vt76UO6vnzLfTwcf/2pB051nVEsjKObN0xuSLzZ83r/4ota95/WygYnhUJzxBOE0sMMEs5qZgw/b6MpENe6hZEtKLOMgq6o5TjThTwLKH3Cy2HQd1GGVZS05qdaaxgMHuPDm9rUw8MVkbbhygmUKUOiLbcrjkiJI0HwzR5vt+WocZTsDpny4DdxNEQaoDBWTvdGZEWLZczLeUxtm8DGB38z2no+ceH/eDweDg4KBSqRwdVY4qSSsdHDAM8/h+9z9dxJkFC5cxAQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;홈 화면 예시&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2fbef38a83dd8e8f42933fa503909bdf/f058b/home_design_example.png&quot;
+        srcset=&quot;/static/2fbef38a83dd8e8f42933fa503909bdf/c26ae/home_design_example.png 158w,
+/static/2fbef38a83dd8e8f42933fa503909bdf/6bdcf/home_design_example.png 315w,
+/static/2fbef38a83dd8e8f42933fa503909bdf/f058b/home_design_example.png 630w,
+/static/2fbef38a83dd8e8f42933fa503909bdf/40601/home_design_example.png 945w,
+/static/2fbef38a83dd8e8f42933fa503909bdf/78612/home_design_example.png 1260w,
+/static/2fbef38a83dd8e8f42933fa503909bdf/46115/home_design_example.png 1290w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/th&gt;
+&lt;th&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/457817a79eb91d7064e08297ae470574/46115/post_design_example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 216.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAIAAAD3xz8iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE4klEQVR42p2WW08TWxTH+xH5FCY+KISQaOKDPsCTl0QTNVFfwAPRKA/4QIjJIWihIiARQzjQ20zbmc6l7bS007nQC+e3Z/dMaYHjydmZ7q7Zs9fl/19r7ZnEeTS63a5lWe12+/z60Ww2TdM0DOPo6Mj3fVYS8kEYhgcHB9VaDbnf71+pfHJycnx8fHh4uDA/32g0hDJbw7Mzrl6v1+l2pdzpdPmJuduRAosIvWhgW8j9fsJt+5ph62aFmats15Si/udGMpn6nkxtr39JftlMpb7vscieUtnSjEpBM38dZVBMYJW/i1ez1Xbqp41my2mcOvVG47RZP222XC/egMwKYSZGEPZHRrwwfHI+sjdx/q/jOvLkGChDA3OlUvn586eqqtlokDm4zefztm3v7OwoiuK67kWLiYseqtVqKpXa3t7e3NzM5XJk9cePH9yWy+Xd3d1kMqlp2rgyN57nkZAYHnMQBBdjJorY7YgyFTM5OXnnzp0HDx48ffr09u3bi4uLd+/effjw4fPnz589e/bq1atbt27Nzs5egdlxnI8fPxLVt2/flpeXP3z4sL+/v7a29u7dO4w+evQIWysrK58/fwYXvMjyGihTd3Nzcy9fvsQJnl+8eLG0tDQzM7OxsXHv3r2JiYknT57cv3//5s2b09PT6+vrOADjQFnX9devX6P29u3b+fl55Ddv3rx//55K3tvbe/z48erqKuEQPGowCnkStlCGUtDeuHFjampqYWHh69evss/OfzcSMkOfPq38EQ2SmclkpLIkVnRCNA+6Yoxt0VhhKJ+RIc/36/WGHwT/ybPn+elsLpPNq2pJoyAM8ySTrTlOXHn9SzU/UmH/bwhl+rxSqbZabq3mVB3nlB6sN5ibrZbNuusiV6o1FqvVGk0ahmcXw/aIU9P0k0xOUQvFkpbNKZpeLml6OpMzTAsgmVw+rxS4snkFT0Nl2JI6XGXDMk2bO3yiz2XZFWTTstiBwAZMBEH4j2ffx/ZY68a3Y8IVhF06J35zDFwgrNMR9DRbsAJtTh1qGhCBDG+u23bbHrRxtT2Pbb4fDJU5wQGpqMW/jtPM6Uw2l1dNyy5pGgTqhmmYNrgEHZbNI2yPEAaxaqHEMy4Dfq2KphuFQqlQ1CBM1w2MQhia6Uye83SoTMjClWmn01m9bMAwtzgkT/Af5axM/ZG/Ykkn0yOYqUFeB91ujxDoB05y2vUsGtFtR64wwmhlXFn2A8rgJ4ewxRyEITN2QyFEUqfDIr0ga36AmTjBDFiwETnMETDFAGboIHLCZk9eUXN5hfXhWxKfPBYFRAXVHNBWqlXyhUzlYQu7Ejk8M4+UJ2HAhCxm6RAdihkK6QPLslmUdc6MZ9yAIM5zoIgIS7L0sU2ErNDZhE3ApZIwSiHBBZXC/iFmzNBrgyZsufzRkUJsuUROnik4yqsTebviXXVdPfcvvffGG8NttyNUZVlPACPUqNQsiKDcIpiiySlSL+J5qMx7iAxBkqoW4QPySEnEnOhyIufoEGkPguhrojd+DIEKnLzKgEogTTG1SQz0BNcfoyNfBmOYe9FxLdfF506nO3aMJqAaVLGmJ8pzkIlCqUzipFWaHPzxd5dsaeFZvrXiT4TYP2L03SQGe0hyHOAwz2NhFwqFra0tviN2d3d2d8RIbW0Vi8XLuP4GL+BQRAD71KgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;포스트 페이지 예시&quot;
+        title=&quot;&quot;
+        src=&quot;/static/457817a79eb91d7064e08297ae470574/f058b/post_design_example.png&quot;
+        srcset=&quot;/static/457817a79eb91d7064e08297ae470574/c26ae/post_design_example.png 158w,
+/static/457817a79eb91d7064e08297ae470574/6bdcf/post_design_example.png 315w,
+/static/457817a79eb91d7064e08297ae470574/f058b/post_design_example.png 630w,
+/static/457817a79eb91d7064e08297ae470574/40601/post_design_example.png 945w,
+/static/457817a79eb91d7064e08297ae470574/78612/post_design_example.png 1260w,
+/static/457817a79eb91d7064e08297ae470574/46115/post_design_example.png 1290w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;media 쿼리를 사용하는 방법은 아래와 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-css line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;조건&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  내용
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;조건에 해당하는 경우에는 원래 정의했던 css가 아니라 &lt;code class=&quot;language-text&quot;&gt;내용&lt;/code&gt;부분에 해당하는 css가 적용됩니다.&lt;/p&gt;
+&lt;p&gt;대체로 사용하는 media 쿼리의 break point를 w3schools에서 찾아보았습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/819c52f41afb3f5d951e4f290c5ee643/e8950/break_point_example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.92405063291139%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABzUlEQVR42pWS24rbMBCG/eKlj9EnKPSy9Lr0tqWwhS0U6m7IYUkcWbJknXxKbP+dUUyWhWwPho+RZOnXP6PJyrLEarXCer1ObDYb5Hl+XTudTvifLyuKIh3c7XbYbrcpsijD60IIGGNgrYX3Hs65BM+ds6jrOsFzvjwLIaQNWmuoqkJFsABHpRQ4gxgjbT5jGE7EgIEOMiyQ5gSPx3FE9vPXA+7u71EIiaq2ULq+YBZoXCqNY6luIxdoLGlfttnvcXgsyImCKivIhVIoiKMk15Su82ja9kpsbuN8pBpSamffowstOteg84SNaIlGewxdj/E8YpqmhfnFB+kp9ewgJToTEC1RX2JDMRiPoCyaQBeQaEO0LV3cD0l4nudn8Nf1PTtUyVF05IgcJkGesziJNrFFTyLjOP21ZZLDvSjRSGqFitqCHDnCCpOiK2tyGJPgNM//KKgkOQrw15QXd0vaLRWb24XryG0xLum+KMhPDUspOaqTcoiaa+cQKnJ9NAjWp9q03QU+NP1J8M33T3h19x6vv33A522eUhfcU1KnVuILlTZP/UlIaqVb8L7s4+MPvH34gnerr8jlgVL30NTgjLHuOtbGPq3fgv7XzuE3woPh0w5HHZ0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Break Point 예시&quot;
+        title=&quot;&quot;
+        src=&quot;/static/819c52f41afb3f5d951e4f290c5ee643/f058b/break_point_example.png&quot;
+        srcset=&quot;/static/819c52f41afb3f5d951e4f290c5ee643/c26ae/break_point_example.png 158w,
+/static/819c52f41afb3f5d951e4f290c5ee643/6bdcf/break_point_example.png 315w,
+/static/819c52f41afb3f5d951e4f290c5ee643/f058b/break_point_example.png 630w,
+/static/819c52f41afb3f5d951e4f290c5ee643/40601/break_point_example.png 945w,
+/static/819c52f41afb3f5d951e4f290c5ee643/78612/break_point_example.png 1260w,
+/static/819c52f41afb3f5d951e4f290c5ee643/e8950/break_point_example.png 2000w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;저는 medium 디바이스 기준으로 작은 화면과 큰 화면을 나누기로 했고, 아래처럼 조건에 &lt;code class=&quot;language-text&quot;&gt;max-width: 768px&lt;/code&gt;를 넣어주었습니다.&lt;/p&gt;
+&lt;p&gt;수정한 style.css 파일을 보면 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-css line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 768px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.global-wrapper&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; column&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변경 */&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; center&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변했을 때, margin 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.global-header&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-0&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 홈 페이지가 아닌 경우 프로필 숨기기 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.global-wrapper[data-is-root-path=&quot;false&quot;] .bio&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변했을 때, margin 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.global-wrapper[data-is-root-path=&quot;false&quot;] .global-header&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-4&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-6&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변했을 때, margin 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.global-wrapper[data-is-root-path=&quot;true&quot;] .bio&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변했을 때, margin 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.bio&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; flex&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; column&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; center&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 프로필 이미지 크기 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.bio-avatar&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;min-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 50px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변했을 때, margin 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.bio-name&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 세로 정렬로 변했을 때, margin 조정 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.sidebar-wrapper&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-0&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0 20px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; flex&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; column&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; center&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 280px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;min-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 280px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;token comment&quot;&gt;/* 목차를 위해 확보했던 padding 제거 */&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;.post-content&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding-right&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-0&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;코드 블럭 잘리는 문제 처리&lt;/h3&gt;
+&lt;p&gt;media 쿼리 처리를 추가하면 바로 문제를 해결할 수 있을 줄 알았지만 특정 글들이 화면 안에 들어오지 않고 잘리는 문제가 발생했습니다.&lt;/p&gt;
+&lt;p&gt;모든 글이 아니라 특정 글에서만 문제가 발생해서 원인을 찾던 중 코드 블럭이 있는 글에서 문제가 발생한다는 사실을 찾았습니다.&lt;/p&gt;
+&lt;p&gt;챗 지피티에게 도움을 요청하던 중 이 답변을 보고 제가 전체 글을 감싸는 div를 추가했었다는 사실을 깨달았습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2b0189c4bda04c22e4ce051d5fac72c6/36eca/gpt_answer.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.60759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6UlEQVR42qWR62qEMBBGff833D+rNRrvtzV3E79mUiwshWJp4PAFE87MxOzRPMAZB2MMZVmibVtUVYVhGMA5h5QStM7zxJ2VPT+eqOsaeZ5/SVmZkmRFUaDrOkzTlKAi4zim/bIsCCH8FL72HcaY2ImCjqm1TiilUneEEOItiesefbuSpsiMErBGwVkFqyWMjnvnYK1N+RvUCBW+0nuPbJo5mj5H31Xo2xKvbY6HOgnvcBUnjuNAtsgV7dahmRvMUbauW8Jad1tKUJdJKOSOXe3xXcT3uM7ZP8nehP7wCD7E+UN6g/9Af/0TdOtsd/CaGq0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;GPT 답변&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2b0189c4bda04c22e4ce051d5fac72c6/f058b/gpt_answer.png&quot;
+        srcset=&quot;/static/2b0189c4bda04c22e4ce051d5fac72c6/c26ae/gpt_answer.png 158w,
+/static/2b0189c4bda04c22e4ce051d5fac72c6/6bdcf/gpt_answer.png 315w,
+/static/2b0189c4bda04c22e4ce051d5fac72c6/f058b/gpt_answer.png 630w,
+/static/2b0189c4bda04c22e4ce051d5fac72c6/40601/gpt_answer.png 945w,
+/static/2b0189c4bda04c22e4ce051d5fac72c6/78612/gpt_answer.png 1260w,
+/static/2b0189c4bda04c22e4ce051d5fac72c6/36eca/gpt_answer.png 1526w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;em&gt;chat gpt 답변&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;부모 div의 width를 설정하지 않았던 것이 문제의 원인이었습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-css line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.main-wrapper&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-0&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--spacing-4&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;.post-wrapper&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; flex&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; flex-start&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 980px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;글을 감싸고 있는 wrapper의 width를 설정해줬더니 문제가 해결되었습니다!&lt;/p&gt;
+&lt;h4&gt;[참고] 왜 이런 일이 발생하는가?&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;div&gt;&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;width&lt;/code&gt;를 설정하지 않으면 default 값으로 &lt;code class=&quot;language-text&quot;&gt;auto&lt;/code&gt;가 지정됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;width: auto;&lt;/code&gt; 의 경우에는 내부 요소에 따라 크기가 결정되지만&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;width: 100%;&lt;/code&gt; 의 경우에는 내부 요소에 상관없이 강제로 부모 요소의 너비만큼 강제로 채우게 됩니다.&lt;/p&gt;
+&lt;p&gt;그래서 auto를 사용하는 경우에는 위의 문제상황처럼 내부의 코드 블럭 박스가 화면의 크기보다 큰 경우에 내부 컨텐츠가 잘릴 위험이 있습니다.&lt;/p&gt;
+&lt;p&gt;코드 블럭 내부의 text의 overflow 설정은 활용하고 있는 markdown 변환 플러그인에서 자동으로 스크롤이 되도록 설정해주었기 때문에 따로 설정할 내용은 없었습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 2]]></title><description><![CDATA[스프링부트 코드를 정리하기 전에 주식 서비스 프로젝트가 어떤 식으로 이루어져 있는지 정리하는 과정이 필요해서 이 부분을 먼저 정리해보려 합니다. SKALA 과정에서 Java와 SpringBoot를 이어서 배웠기 때문에 Java…]]></description><link>https://jjminsuh.github.io/5/</link><guid isPermaLink="false">https://jjminsuh.github.io/5/</guid><pubDate>Fri, 14 Mar 2025 23:07:33 GMT</pubDate><content:encoded>&lt;p&gt;스프링부트 코드를 정리하기 전에 주식 서비스 프로젝트가 어떤 식으로 이루어져 있는지 정리하는 과정이 필요해서 이 부분을 먼저 정리해보려 합니다.&lt;/p&gt;
 &lt;p&gt;SKALA 과정에서 Java와 SpringBoot를 이어서 배웠기 때문에 Java 실습에서 진행했던 콘솔 주식 서비스 코드를 활용하여 SpringBoot로 옮겨서 리팩토링 하는 과정을 거쳤습니다.&lt;/p&gt;
 &lt;p&gt;그래서 일단 콘솔 주식 서비스를 기반으로 서비스의 큰 구조와 기능들을 정리해보았습니다.&lt;/p&gt;
 &lt;h3&gt;Java console 주식 서비스 분석&lt;/h3&gt;
