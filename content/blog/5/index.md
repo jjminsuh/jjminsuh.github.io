@@ -178,24 +178,24 @@ Timer와 TimerTask를 활용하여 해당 기능을 추가해줬습니다.
 
 ```java
 private void start() {
-	...생략...
-	
-	// 가격 변동 업데이트 위한 타이머
-  Timer timer = new Timer();
+    ...생략...
 
-  TimerTask task = new TimerTask() {
-      @Override
-      public void run() {
-          stockRepository.changeRandomStockPrice();
-          stockRepository.saveStock();
-      }
-  };
-  
-  timer.scheduleAtFixedRate(task, 10000, 10000);
-  
-  ...생략...
-  
-  timer.cancel();
+    // 가격 변동 업데이트 위한 타이머
+    Timer timer = new Timer();
+
+    TimerTask task = new TimerTask() {
+        @Override
+        public void run() {
+            stockRepository.changeRandomStockPrice();
+            stockRepository.saveStock();
+        }
+    };
+
+    timer.scheduleAtFixedRate(task, 10000, 10000);
+
+    ...생략...
+
+    timer.cancel();
 }
 ```
 
