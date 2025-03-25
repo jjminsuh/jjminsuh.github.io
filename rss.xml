@@ -1,4 +1,254 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Mar 2025 04:24:12 GMT</lastBuildDate><item><title><![CDATA[블로그 반응형으로 만들기]]></title><description><![CDATA[SKALA 포트폴리오 이벤트에 블로그를 제출하려고 보니 모바일 화면에서 레이아웃이 무너져 있는 것을 발견했습니다. 기본 Gatsby…]]></description><link>https://jjminsuh.github.io/6/</link><guid isPermaLink="false">https://jjminsuh.github.io/6/</guid><pubDate>Tue, 18 Mar 2025 14:18:18 GMT</pubDate><content:encoded>&lt;p&gt;SKALA 포트폴리오 이벤트에 블로그를 제출하려고 보니 모바일 화면에서 레이아웃이 무너져 있는 것을 발견했습니다. 기본 Gatsby 블로그 레이아웃에 사이드바를 추가하면서 반응형 처리를 하지 않은 것이 문제였습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://jjminsuh.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 25 Mar 2025 05:07:21 GMT</lastBuildDate><item><title><![CDATA[[SpringBoot] 스프링부트 프로젝트 시작하기 - 3]]></title><description><![CDATA[앞선 글에서 정리했던 Java Console 주식 서비스의 기능들을 구현하기 위한 API를 구상해보았습니다. 그리고 이를 더 쉽게 보기 위해서 프로젝트에 Swagger…]]></description><link>https://jjminsuh.github.io/7/</link><guid isPermaLink="false">https://jjminsuh.github.io/7/</guid><pubDate>Mon, 24 Mar 2025 02:39:29 GMT</pubDate><content:encoded>&lt;p&gt;앞선 글에서 정리했던 Java Console 주식 서비스의 기능들을 구현하기 위한 API를 구상해보았습니다.&lt;/p&gt;
+&lt;p&gt;그리고 이를 더 쉽게 보기 위해서 프로젝트에 Swagger를 추가하여 조금 더 쉽게 요청을 테스트하고 확인할 수 있도록 했습니다.&lt;/p&gt;
+&lt;p&gt;우선 앞선 기능들을 정리하면 아래와 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 사용자 관련 기능
+    - 사용자 등록
+    - 사용자 삭제
+    - 사용자 조회
+    - 주식 구매
+    - 주식 판매
+- 주식 관련 기능
+    - 주식 등록
+    - 주식 삭제
+    - 주식 조회&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 각각의 기능을 하나의 API로 설정하고자 했습니다.&lt;/p&gt;
+&lt;p&gt;이를 바탕으로 이번 글에서는 Swagger를 설정하고 기본적으로 API를 정의하는 코드에 대해서 살펴보고자 합니다.&lt;/p&gt;
+&lt;h3&gt;프로젝트에 Swagger 추가하기&lt;/h3&gt;
+&lt;p&gt;우선 작업을 시작하기 전에 Swagger를 프로젝트에 추가하고자 했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://swagger.io/&quot;&gt;https://swagger.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Swagger에 대한 공식 문서는 위에서 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;그럼 이제 본격적으로 프로젝트에 Swagger를 추가해보겠습니다.&lt;/p&gt;
+&lt;h4&gt;Dependency 추가하기&lt;/h4&gt;
+&lt;p&gt;저는 처음에 Maven으로 프로젝트를 설정했기 때문에 pom.xml 파일에 dependency를 추가해줬습니다.&lt;/p&gt;
+&lt;p&gt;pom.xml 파일에 아래 내용을 바로 추가해주는 것도 가능하고,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-xml line-numbers&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;org.springdoc&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;springdoc-openapi-starter-webmvc-ui&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2.4.0&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;vscode를 사용한다면 IDE에서 dependency를 검색해서 추가하는 것도 가능합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 293px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e0b454b007c92a238e9be3fcf792e422/3cf3e/maven_add_dependency.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.88607594936708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAADk0lEQVR42pVVXY/aVhCN+lL1MVITtStldwFjYxtYwNhgbGzAmA+zS9glStQNjZJqVSVVpDz0qVKltr/8dM4lBvZD6vZhNPb1nXPPnJk7fuJ5HobDITqdDmy7il4vwHyeIU0nWCwWsCwbum7AMCr/YSaKxRKe9Ho9XF9fo9/vS7AF3+9hMpkiSRJMpzNUq7X/B9hqtdBsNkHP4HbbxWp1KezOsVy+RK1WR6FQfAToV0DHcQSkDXoCdru+YphlmUo9yxY4P79QwOWy/jjA3KrVqmKYJGOMx6my4XCkjOuPZpgbi8JAMhqPx7i4eImrq7X4pZKA38mS6R9avvYAw5qqMtOczTI0Gi0cH5+ojdSRngc2my3U6nUlA989r6Ps5OT0NqBpWmozNZzP53BdTwWRWb1+plqo0WAB28pzL+PobbuG09PCfUDSZ+tQP7YOezEMQ8WaWrKVWKzLyyslRRj2FUtmdw+QwhoVE6YwcRxXNnpIRMuwH6kDyFbTysqomSaHa1/1Y2Eoyy3AimGgouuwTRNd0STwfQzjGKNBjKgfwDIr0DUNRllDuVRCWZ71AysW7jDU7TNoVgM1R4BmSzi9AdLFFabLV7CaHRwVDLzQLBSMKkpmXVmxUpP3mni5ACU9BxRxpQBPw7f4LrrB9+lH6KsvMNa/I7z5B2fXf8D/5W+0f/4T3Q9/4fn0E77pvMO3wXscZZ/xYvEZz7IveFpPDhiKsEfuHM86K/zYXaEyeYv64gP89a9wVzcI3/yG7vojgtefYEw2eC57juPX0NINtOQnHAWv8IPl3U7ZMnTRUEQvFhD2fERBIFp6iKTKoQyRNBlhNpmIpZjIcxJHGEZ9DPoh7Io09unJnaJULFVpW1rA9wME0hK0wWCoWmY0SrbXUTwtjmV9JNdS5CqXH6qytAzLn48x3pogCBUYQZNke7+jKBKLZW0gYy9SF4D9qwA5tnLbA9oKjE3L4G2Tj9XQZVMThE1PUI44HrjrQ07q6XQqjHxZNO4BBuL3DBMFytR5QBwP1HOr5ajmVoCBCL9erxUTXdd3gNuUQ5UygwmYa8hU+U5AsuRg2AE+pCGHAQHJkOml6WHKcwVMI3OudzrdvYac1mTHn1U+LHlXdynfYUiQfPjGci3J0nXdPSBT3mw2snl4a8TzV0BQMiUIg0eqVbbp0jiFmLLjtPcpP8SQKTPVbfBAhu18N7Y4zTkvD42H5oD/Ap+ODFf6woE7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dependency 추가&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e0b454b007c92a238e9be3fcf792e422/3cf3e/maven_add_dependency.png&quot;
+        srcset=&quot;/static/e0b454b007c92a238e9be3fcf792e422/c26ae/maven_add_dependency.png 158w,
+/static/e0b454b007c92a238e9be3fcf792e422/3cf3e/maven_add_dependency.png 293w&quot;
+        sizes=&quot;(max-width: 293px) 100vw, 293px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 vscode의 maven 툴에서 Dependencies 옆의 + 버튼을 누르면 아래와 같이 상단에 팔레트에서 dependency를 검색할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 617px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1699656a2b55066be9fe6b51a48f1358/bc962/select_dependency.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.49367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABz0lEQVR42o2Ty27TQBSG8wLAig2b5uJbnNpxfLfHnosztknTQgVISJQd4v0f4ed40kaoDRWLT2dmpPnmP+PxjEkNNR4h9IhuvDG14oroXlCL/auUrcLMDyLkTBAcWc2RVg2irEQY59gmBYJdZsYhVT+M/8lmm8DxA8xs24aSCjeHAwTn0Ps9tNbo+x5SCJRFAVbXSNMUi/kCq+UK1uoyq+USM8f1wLkgwQDWckiSCy7NWkvzumaGLMux2VzDW/uwbfcFluXC91wSOi6EkBiG0QiUUpATUpr5BGMN4jhBFO2M1LJskjjPcLGk9GfhOJ6Ee2p5kj0Jp2RTQt/fmA2XZQ4mz8K0/CjUujd1oqpqFEWJJEmxNi2eNlwS/c05Ydd1JkXTtKYGQQjPW58TPfHfQkEfYkrISKhU9yhu6C475JQ0TXNKXJmDXhOfhDQQbYOBnkrLGDopoAQHpzVFz4ZVFcqc7rEsEIUhHMu6iEuYZ2OtAzT9Hfa331B1B/DhFo0+gmn6aw73VI9IWo2M94hZh7m/w3x9AT/GleVj9iGo4Y8/kd0+4Hr8gfjzb2zvftH4AeHwHZb4glV7D1d+xVX9CW9CjXfb/hkab6OPeO9l+AMZ8321oz31OgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Dependency 선택&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1699656a2b55066be9fe6b51a48f1358/bc962/select_dependency.png&quot;
+        srcset=&quot;/static/1699656a2b55066be9fe6b51a48f1358/c26ae/select_dependency.png 158w,
+/static/1699656a2b55066be9fe6b51a48f1358/6bdcf/select_dependency.png 315w,
+/static/1699656a2b55066be9fe6b51a48f1358/bc962/select_dependency.png 617w&quot;
+        sizes=&quot;(max-width: 617px) 100vw, 617px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;springdoc&lt;/code&gt; 으로 검색어를 입력하여 &lt;code class=&quot;language-text&quot;&gt;springdoc-openapi-starter-webmvc-ui&lt;/code&gt;를 선택해주면 됩니다.&lt;/p&gt;
+&lt;p&gt;직접 pom.xml 파일에 추가하는 방식은 최신 버전을 찾아서 직접 입력해줘야하는 반면에 두 번째 방식으로 진행하게되면 자동으로 pom.xml에 dependency를 추가할 때, 최신 버전으로 설정됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui&quot;&gt;https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;해당 dependency의 최신 버전은 여기서 확인할 수 있습니다.&lt;/p&gt;
+&lt;h4&gt;swagger-ui 확인하기&lt;/h4&gt;
+&lt;p&gt;위의 dependency 설정을 추가한 후에 스프링부트 프로젝트를 실행시키면 자동으로 &lt;code class=&quot;language-text&quot;&gt;/swagger-ui/index.html&lt;/code&gt; 엔드포인트가 생성되는 것을 확인할 수 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://localhost:8080/swagger-ui/index.html&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그래서 이런식으로 내 프로젝트가 돌고 있는 서버 url에  &lt;code class=&quot;language-text&quot;&gt;/swagger-ui/index.html&lt;/code&gt;을 붙여주면 내 프로젝트의 api document를 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/8ae78/swagger_ui.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB5klEQVR42pXSS27TQADGcZ+FSl1xAMoKJIR6BRasuAaIBQs4BAtArKEtUISEqNQVq0Ztkyhp0iS2x3bsJE5sjx9xbP+ZeE1SRZqfZjSPbx4a7dGz+zw5fMzBg4fs7++zt3eP129ecvTtC0ffjzk5Pdro+MdXfv465d37Vzx/+5TDFwdo160rms0Wl5dXNBoNLi4adDs3dPstBnoby7IVawubkTGkP1qv6aCZlkd/YKAbAsO0GY5UW3cQbo+JbFGVUJaFUm5UlRWosqbFWU62XFEWBcVqxaqW15OKvGS5XO5Ek1ISxzFJkpJlGWmaqoG8Di2rgqqqdqJ5k6m6qoUQ6q1sB1NYOGOXMAx3DqsDs1SSxgFpkpCrIxfFqrY+4S7yfFnTepbkb3uGaU+xvTnTuSSMl/+Rb7WIMkKZoZ0ZPp87Hl3hMHCnNeGHeDLFjZLaOIpxwu2sQOIGEdqfyRWfxBldW+fWFfQ9wXDmYCxc9LmLoZjBBFvOcGJ/I0uNu9JfBzb5aJ7TdXRuHKOu22LI9ahHU+/TMgb1JuvQcTK/O/C3NeJDr0lHCDqmoKt+/436/bfjsbq+y8DzMH21IFjgROFGVhjgKlrTLjnvVziTEHuiOn2Jt0iYy5wgKVjEq7p9Fz9SdZTxD0amwwEtXAzrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Swagger UI&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/f058b/swagger_ui.png&quot;
+        srcset=&quot;/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/c26ae/swagger_ui.png 158w,
+/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/6bdcf/swagger_ui.png 315w,
+/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/f058b/swagger_ui.png 630w,
+/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/40601/swagger_ui.png 945w,
+/static/1d4ddb6128ea8bb32ca871e6a3ae1fad/8ae78/swagger_ui.png 1096w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;em&gt;이미 API를 작성한 코드라서 아래에 API 목록이 뜨는 것을 확인할 수 있는데, 처음에는 빈 화면이 뜰 겁니다!&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;API 추가하기&lt;/h3&gt;
+&lt;p&gt;이제 Controller에 API를 정의해보겠습니다. (큰 구조는 다음 글에서 다루고 제가 만들고자하는 API 리스트와 Swagger description 추가하는 부분 위주로 정리했습니다.)&lt;/p&gt;
+&lt;p&gt;우선 API는 Player API와 Stock API로 분류하여 총 두 개의 Controller를 정의했습니다.&lt;/p&gt;
+&lt;p&gt;Player API에서는 앞선 기능 목록 중 &lt;code class=&quot;language-text&quot;&gt;사용자 관련 기능&lt;/code&gt;을 정의했고, Stock API에서는 &lt;code class=&quot;language-text&quot;&gt;주식 관련 기능&lt;/code&gt;을 정의했습니다.&lt;/p&gt;
+&lt;p&gt;API 리스트는 아래 사진과 같습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4f1d90d4cca04087c66ef0c34e4bc15b/21335/api_list.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR42pXRUU/bMBQF4Pz/v8Hb4AGkSQgh3qYhpj1uWomTNU0d27HjNHGc2iloZ7eG16rw8Em24nt0lZMZ3UIKgb7fwbkJMS5YlsOnHedCiMjuV694WEWsuUatBnA9Qo8Rxi0kJh2dzzHHmSEgu9r+ws32N1Z8i5K2LVoFPvRo9xPk7KCI9ONZYhog3Q7ZpfiBG/ETrKnB1BZMvskF3WWdzpVVaEZD4buTpO+hpv4Y+B3X4gml4mAthakaz3KDP3yNVUNEhbWV4K6jjfuThLeQk6XAvMM161DwFjn9RyYMClJ3IzbvmsEnYpxPSt9JVvIItvFodQ9jHSa/JPvwihDf7MPLWfP+6ICsMCVyxaCtQbezcFTCRIXMcSb+3XyWDz7NZRf8GV8ahkIp5NRwYVpUFNxQc5/BqeXGDci+PUo8PknUdYumsYkxDtb6pP8g2030njb8d/sVL/d3MFUFXf5N7LqC4xyBtj4Y8yGL1ghG4z952Twzf9Y0nwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;API 목록&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4f1d90d4cca04087c66ef0c34e4bc15b/f058b/api_list.png&quot;
+        srcset=&quot;/static/4f1d90d4cca04087c66ef0c34e4bc15b/c26ae/api_list.png 158w,
+/static/4f1d90d4cca04087c66ef0c34e4bc15b/6bdcf/api_list.png 315w,
+/static/4f1d90d4cca04087c66ef0c34e4bc15b/f058b/api_list.png 630w,
+/static/4f1d90d4cca04087c66ef0c34e4bc15b/40601/api_list.png 945w,
+/static/4f1d90d4cca04087c66ef0c34e4bc15b/21335/api_list.png 1082w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Controller 구성하기&lt;/h4&gt;
+&lt;p&gt;이제 Controller 별로 API를 구분하고 설명을 작성하기 위해 annotaion을 추가해줬습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;PlayerController&lt;/code&gt;의 코드를 살펴보면 아래와 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;생략&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/players&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Tag&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Player API&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; description &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Player 관련 API&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PlayerController&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;생략&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@RequestMapping&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;PlayerController의 기본 url mapping은 &lt;code class=&quot;language-text&quot;&gt;/players&lt;/code&gt;로 잡아주었습니다.&lt;/p&gt;
+&lt;p&gt;해당 controller에서 정의되는 API는 모두 &lt;code class=&quot;language-text&quot;&gt;base_url/players&lt;/code&gt;를 base로 가지도록 정의됩니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@Tag&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;controller에 &lt;code class=&quot;language-text&quot;&gt;Tag&lt;/code&gt; annotation을 추가하면 아래 사진처럼 Swagger UI에 해당 API에 대한 description을 추가할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/01cf91445f7664759d24151066e6f8b7/ffe34/api_description.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 5.063291139240507%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR42mN49uzF/6dPn/9/8/bd/48fPv3//uPH/1+/fpGFv3///h8ANM5NvO0yZFYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;API 설명&quot;
+        title=&quot;&quot;
+        src=&quot;/static/01cf91445f7664759d24151066e6f8b7/f058b/api_description.png&quot;
+        srcset=&quot;/static/01cf91445f7664759d24151066e6f8b7/c26ae/api_description.png 158w,
+/static/01cf91445f7664759d24151066e6f8b7/6bdcf/api_description.png 315w,
+/static/01cf91445f7664759d24151066e6f8b7/f058b/api_description.png 630w,
+/static/01cf91445f7664759d24151066e6f8b7/40601/api_description.png 945w,
+/static/01cf91445f7664759d24151066e6f8b7/ffe34/api_description.png 1055w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;API 정의하기&lt;/h4&gt;
+&lt;p&gt;실제 API 정의는 다음과 같이 할 수 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Operation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;summary &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ID로 사용자 조회&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+           description &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ID를 받아 해당 사용자를 반환한다.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;PlayerDto&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPlayerById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@PathVariable&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;PlayerDto&lt;/span&gt; response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; playerService&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getPlayerByPlayerId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;notFound&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ok&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 코드에서 확인할 수 있는 ID를 통해 사용자를 조회하는 API를 기준으로 정리를 해보겠습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@Operation&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Operation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;summary &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ID로 사용자 조회&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; description &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ID를 받아 해당 사용자를 반환한다.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 Annotation은 Swagger UI에 해당 API의 설명을 추가해줍니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;@GetMapping&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/{id}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;해당 Annotationadmf 통해 API의 method 및 url 설정해줄 수 있습니다. 여기서는 GetMapping으로 설정해주었으므로 GET method로 정의했음을 확인할 수 있고, url은 &lt;code class=&quot;language-text&quot;&gt;/{id}&lt;/code&gt;로 설정해주었기 때문에 PathVariable로 사용자의 id를 받아서 해당 id를 가진 사용자의 정보(&lt;code class=&quot;language-text&quot;&gt;PlayerDto&lt;/code&gt;)를 반환함을 확인할 수 있습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 방식으로 annotation을 활용하여 다른 API들도 정의해주었습니다.&lt;/p&gt;
+&lt;p&gt;이번 글에서는 API를 정의하는 과정까지만 정리하고 다음 글에 이어서 전체 구조를 그리면서 스프링부트 프로젝트 내의 코드에 흐름에 대해서 정리해보겠습니다!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[블로그 반응형으로 만들기]]></title><description><![CDATA[SKALA 포트폴리오 이벤트에 블로그를 제출하려고 보니 모바일 화면에서 레이아웃이 무너져 있는 것을 발견했습니다. 기본 Gatsby…]]></description><link>https://jjminsuh.github.io/6/</link><guid isPermaLink="false">https://jjminsuh.github.io/6/</guid><pubDate>Tue, 18 Mar 2025 14:18:18 GMT</pubDate><content:encoded>&lt;p&gt;SKALA 포트폴리오 이벤트에 블로그를 제출하려고 보니 모바일 화면에서 레이아웃이 무너져 있는 것을 발견했습니다. 기본 Gatsby 블로그 레이아웃에 사이드바를 추가하면서 반응형 처리를 하지 않은 것이 문제였습니다.&lt;/p&gt;
 &lt;p&gt;그런데 마침 프로그래밍 기초 과정에서 CSS media 쿼리에 대한 내용을 배웠고, 바로 적용해보자고 마음먹고 수정을 진행했습니다.&lt;/p&gt;
 &lt;p&gt;사이드 바를 도입할 때 사이드 바의 크기를 픽셀로 고정하고 남은 자리에 블로그 글(또는 목록)을 채울 수 있는 방식으로 구현했는데, 화면이 작아지는 경우 블로그 글에 할당되는 화면 크기가 너무 작아지는 것이 문제였습니다. (아쉽지만 무너진 레이아웃 캡쳐 화면이 없네요…)&lt;/p&gt;
 &lt;h3&gt;media query 적용하기&lt;/h3&gt;
