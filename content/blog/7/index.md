@@ -2,6 +2,10 @@
 title: "[SpringBoot] 스프링부트 프로젝트 시작하기 - 3"
 date: "2025-03-24T11:39:29.801556"
 description: "API 정의하기 (feat. Swagger)"
+tags:
+  - SpringBoot
+  - Backend
+  - SKALA
 ---
 
 앞선 글에서 정리했던 Java Console 주식 서비스의 기능들을 구현하기 위한 API를 구상해보았습니다.

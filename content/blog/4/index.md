@@ -2,6 +2,8 @@
 title: "[SKALA] SKALA 2월 회고"
 date: "2025-03-11T19:00:03.284Z"
 description: "SKALA 2월 회고"
+tags:
+  - SKALA
 ---
 
 3월 첫 주에 Java, SpringBoot 수업을 들으면서 실습한 내용들을 블로그에 정리해보면 좋겠다는 생각에 묵혀두었던 블로그를 금요일에 다시 꺼내보았다.

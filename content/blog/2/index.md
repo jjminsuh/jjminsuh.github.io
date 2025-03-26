@@ -2,6 +2,9 @@
 title: "[Android] ViewModel 활용하기"
 date: "2022-06-07T19:00:03.284Z"
 description: "안드로이드 프로젝트에서 ViewModel 활용하기"
+tags:
+    - Android
+    - MVVM
 ---
 
 \* 과거에 제가 네이버 블로그에 작성했던 글을 가져왔습니다.

@@ -2,6 +2,8 @@
 title: Github Pages와 Gatsby로 개발 블로그 만들기
 date: "2025-01-14T16:50:03.284Z"
 description: "Github Pages와 Gatsby를 활용하여 개발 블로그를 만들었습니다."
+tags:
+  - Gatsby
 ---
 
 언젠간 개발 블로그를 하나 만들어서 기록을 해야겠다는 다짐을 했었는데, 올해 첫 목표로 한 번 도전해보기로 했습니다.

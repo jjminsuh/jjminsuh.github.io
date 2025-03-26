@@ -2,6 +2,10 @@
 title: "[SpringBoot] 스프링부트 프로젝트 시작하기 - 1"
 date: "2025-03-07T19:00:03.284Z"
 description: "스프링부트 프로젝트 생성하기 및 vscode IDE 설정"
+tags:
+  - SpringBoot
+  - Backend
+  - SKALA
 ---
 
 첫 백엔드 개발을 경험해보았습니다.
