@@ -24,9 +24,9 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
           <p className="text-gray-500 text-sm">{post.frontmatter.date}</p>
         </header>
 
-        <div className={`grid ${hasToc ? 'md:grid-cols-[2fr_1fr]' : ''} gap-10`}>
+        <div className={`grid ${hasToc ? 'md:grid-cols-[3fr_1fr]' : ''} gap-10`}>
           <div
-            className="prose prose-lg max-w-none post-content"
+            className="prose prose-lg"
             itemProp="articleBody"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
