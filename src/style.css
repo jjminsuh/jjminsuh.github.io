@@ -1,4 +1,7 @@
 /* CSS Custom Properties Definitions */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --maxWidth-none: "none";
@@ -254,10 +257,12 @@ pre {
 }
 
 .global-wrapper {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
   display: flex;
+  flex-direction: row;
+  max-width: var(--maxWidth-wrapper);
+  margin: 0 auto;
+  padding: var(--spacing-10) var(--spacing-5);
+  gap: 2rem;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -275,8 +280,8 @@ pre {
 }
 
 .main-wrapper {
-  width: 100%;
-  padding: var(--spacing-0) var(--spacing-4);
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .post-list-item {
@@ -364,23 +369,15 @@ pre {
   margin: var(--spacing-0);
 }
 
-.post-wrapper {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 980px;
-}
-
-.post-content {
-  padding-right: 20%;
-  width: 100%;
-}
-
 .toc-container {
-  position: fixed;
-  right: 0;
-  width: 16%;
+  width: 280px;
+  position: sticky;
+  top: 4rem;
+  align-self: flex-start;
+  font-size: 0.875rem;
+  color: #4a5568;
 }
+
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
@@ -394,6 +391,21 @@ pre {
   align-items: center;
   width: 280px;
   min-width: 280px;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+.toc li {
+  margin-bottom: 0.5rem;
+}
+.toc a {
+  text-decoration: none;
+  color: #4a5568; /* text-gray-700 */
+}
+.toc a:hover {
+  color: #1a202c; /* text-gray-900 */
 }
 
 /* Media queries */
@@ -457,9 +469,5 @@ pre {
     align-items: center;
     width: 280px;
     min-width: 280px;
-  }
-
-  .post-content {
-    padding-right: var(--spacing-0);
   }
 }

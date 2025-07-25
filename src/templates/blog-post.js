@@ -1,60 +1,68 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import UtterancesComment from "../components/utterance-comment"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
+import UtterancesComment from '../components/utterance-comment'
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
+const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+  const hasToc = post.tableOfContents && post.tableOfContents.length > 0
 
   return (
     <Layout location={location} title={siteTitle}>
       <article
-        className="blog-post"
+        className="px-4 py-8 w-full max-w-7xl mx-auto"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className="mb-10">
+          <h1 className="text-4xl font-extrabold mb-2" itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
+          <p className="text-gray-500 text-sm">{post.frontmatter.date}</p>
         </header>
-        <div className="post-wrapper">
-          <div className="post-content">
-            <section
-              dangerouslySetInnerHTML={{ __html: post.html }}
-              itemProp="articleBody"
-            />
-          </div>
-          {/* <div className="toc-container">
-            <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }}></div>
-          </div> */}
+
+        <div className={`grid ${hasToc ? 'md:grid-cols-[2fr_1fr]' : ''} gap-10`}>
+          <div
+            className="prose prose-lg max-w-none post-content"
+            itemProp="articleBody"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+
+          {hasToc && (
+            <aside className="hidden md:block border-l pl-4 text-sm text-gray-600 sticky top-24 max-h-[80vh] overflow-y-auto">
+              <h2 className="text-base font-semibold text-gray-700 uppercase tracking-wide mb-3">
+                On this page
+              </h2>
+              <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+            </aside>
+          )}
         </div>
 
-        <hr />
-        <footer>
+        <hr className="my-12" />
+        <footer className="mt-8">
           <Bio />
         </footer>
       </article>
-      <div>
-        <UtterancesComment/>
+
+      <div className="max-w-4xl mx-auto px-4">
+        <UtterancesComment />
       </div>
-      <nav className="blog-post-nav">
-        <ul>
+
+      <nav className="max-w-4xl mx-auto px-4 mt-12 mb-20">
+        <ul className="flex justify-between text-blue-600">
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.fields.slug} rel="prev" className="hover:underline">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.slug} rel="next" className="hover:underline">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -77,11 +85,7 @@ export const Head = ({ data: { markdownRemark: post } }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
     site {
       siteMetadata {
         title

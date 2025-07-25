@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,7 +44,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630
+              maxWidth: 630,
             },
           },
           {
@@ -55,7 +56,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-", // 코드블럭에 언어 클래스 추가
+              classPrefix: 'language-', // 코드블럭에 언어 클래스 추가
               showLineNumbers: true, // 줄 번호 표시
               noInlineHighlight: false, // 인라인 코드 하이라이트 활성화
             },
@@ -83,13 +84,13 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [{ 'content:encoded': node.html }],
                 })
               })
             },
@@ -108,8 +109,8 @@ module.exports = {
                 }
               }
             }`,
-            output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            output: '/rss.xml',
+            title: 'Gatsby Starter Blog RSS Feed',
           },
         ],
       },
@@ -132,9 +133,9 @@ module.exports = {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /images/
-        }
-      }
+          include: /images/,
+        },
+      },
     },
     {
       resolve: `gatsby-omni-font-loader`,
@@ -144,14 +145,14 @@ module.exports = {
         web: [
           {
             name: `Pretendard Variable`,
-            file: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css`
+            file: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css`,
           },
           {
             name: `Elice Digital Coding`,
-            file: `https://font.elice.io/css?family=Elice+Digital+Coding`
-          }
-        ]
-      }
+            file: `https://font.elice.io/css?family=Elice+Digital+Coding`,
+          },
+        ],
+      },
     },
   ],
 }
