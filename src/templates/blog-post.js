@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
 
         <div className={`grid ${hasToc ? 'md:grid-cols-[3fr_1fr]' : ''} gap-10`}>
           <div
-            className="prose prose-lg"
+            className="prose"
             itemProp="articleBody"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
@@ -34,7 +34,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
           {hasToc && (
             <aside className="hidden md:block border-l pl-4 text-sm text-gray-600 sticky top-24 max-h-[80vh] overflow-y-auto">
               <h2 className="text-base font-semibold text-gray-700 uppercase tracking-wide mb-3">
-                On this page
+                목차
               </h2>
               <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
             </aside>

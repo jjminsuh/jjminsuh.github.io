@@ -1,0 +1,48 @@
+/* src/styles/prism-theme.css */
+pre[class*="language-"] {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.75rem;
+  background: #0f172a; /* zinc-900 */
+  color: #e2e8f0; /* zinc-100 */
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+/* Prism line number alignment */
+pre[class*="language-"] .line-numbers-rows {
+  left: 0 !important;
+}
+
+pre[class*="language-"].line-numbers {
+  padding-left: 1.25rem; /* space for line numbers */
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #94a3b8; /* slate-400 */
+  font-style: italic;
+}
+
+.token.keyword {
+  color: #f472b6; /* pink-400 */
+}
+
+.token.function {
+  color: #60a5fa; /* blue-400 */
+}
+
+.token.string {
+  color: #34d399; /* emerald-400 */
+}
+
+.token.number {
+  color: #fbbf24; /* amber-400 */
+}
+
+.token.operator {
+  color: #f87171; /* red-400 */
+}
