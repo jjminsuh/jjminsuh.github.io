@@ -54,6 +54,15 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+              maintainCase: false,
+              removeAccents: true,
+              isIconAfterHeader: true,
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-', // 코드블럭에 언어 클래스 추가

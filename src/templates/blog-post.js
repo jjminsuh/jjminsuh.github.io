@@ -25,50 +25,60 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
         </header>
 
         <div className={`grid ${hasToc ? 'md:grid-cols-[3fr_1fr]' : ''} gap-10`}>
-          <div
-            className="prose"
-            itemProp="articleBody"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          <div>
+            <div
+              className="prose"
+              itemProp="articleBody"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+            ß
+            <hr className="my-12" />
+          </div>
 
           {hasToc && (
-            <aside className="hidden md:block border-l pl-4 text-sm text-gray-600 sticky top-24 max-h-[80vh] overflow-y-auto">
-              <h2 className="text-base font-semibold text-gray-700 uppercase tracking-wide mb-3">
-                목차
-              </h2>
-              <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+            <aside className="hidden xl:block sticky top-24 self-start w-64 text-sm text-gray-700">
+              <div className="border-l-4 border-gray-300 pl-4">
+                <h2 className="text-base font-semibold mb-2">목차</h2>
+                <div
+                  className="toc max-h-[75vh] overflow-y-auto pr-2 text-gray-600"
+                  dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+                />
+              </div>
             </aside>
           )}
         </div>
-
-        <hr className="my-12" />
-        <footer className="mt-8">
-          <Bio />
-        </footer>
       </article>
 
-      <div className="max-w-4xl mx-auto px-4">
-        <UtterancesComment />
-      </div>
+      <div className={`grid ${hasToc ? 'md:grid-cols-[3fr_1fr]' : ''} gap-10`}>
+        <div>
+          <div className="max-w-4xl mx-auto px-4">
+            <UtterancesComment />
+          </div>
 
-      <nav className="max-w-4xl mx-auto px-4 mt-12 mb-20">
-        <ul className="flex justify-between text-blue-600">
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev" className="hover:underline">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next" className="hover:underline">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+          <nav className="max-w-4xl mx-auto px-4 mt-12 mb-20">
+            <ul className="flex justify-between text-blue-600">
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev" className="hover:underline">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next" className="hover:underline">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+
+          <footer className="mt-4">
+            <Bio />
+          </footer>
+        </div>
+      </div>
     </Layout>
   )
 }
