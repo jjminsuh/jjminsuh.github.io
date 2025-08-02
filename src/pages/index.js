@@ -1,9 +1,9 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -14,9 +14,8 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No blog posts found. Add markdown posts to "content/blog" (or the directory you specified
+          for the "gatsby-source-filesystem" plugin in gatsby-config.js).
         </p>
       </Layout>
     )
@@ -24,38 +23,38 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+      <div className="divide-y divide-gray-200">
+        {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
+            <article
+              key={post.fields.slug}
+              className="group"
+              itemScope
+              itemType="http://schema.org/Article"
+            >
+              <header className="mb-2">
+                <h2 className="text-xl font-semibold text-gray-800 group-hover:underline">
+                  <Link to={post.fields.slug} itemProp="url">
+                    <span itemProp="headline">{title}</span>
+                  </Link>
+                </h2>
+                <small className="text-sm text-gray-500">{post.frontmatter.date}</small>
+              </header>
+              <section>
+                <p
+                  className="mt-1 text-gray-700 dark:text-gray-300"
+                  dangerouslySetInnerHTML={{
+                    __html: post.frontmatter.description || post.excerpt,
+                  }}
+                  itemProp="description"
+                />
+              </section>
+            </article>
           )
         })}
-      </ol>
+      </div>
     </Layout>
   )
 }
