@@ -262,7 +262,7 @@ pre {
   flex-direction: row;
   max-width: var(--maxWidth-wrapper);
   margin: 0 auto;
-  padding: var(--spacing-10) var(--spacing-5);
+  /* padding: var(--spacing-10) var(--spacing-5); */
   gap: 2rem;
 }
 

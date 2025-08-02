@@ -31,7 +31,6 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
               itemProp="articleBody"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-            ß
             <hr className="my-12" />
           </div>
 

@@ -1,7 +1,7 @@
 ---
-title: "[SpringBoot] 스프링부트 프로젝트 시작하기 - 3"
-date: "2025-03-24T11:39:29.801556"
-description: "API 정의하기 (feat. Swagger)"
+title: '[SpringBoot] 스프링부트 프로젝트 시작하기 - 3'
+date: '2025-03-24T11:39:29.801556'
+description: 'API 정의하기 (feat. Swagger)'
 tags:
   - SpringBoot
   - Backend
@@ -25,11 +25,12 @@ tags:
         - 주식 삭제
         - 주식 조회
 
-이 각각의 기능을 하나의 API로 설정하고자 했습니다. 
+이 각각의 기능을 하나의 API로 설정하고자 했습니다.
 
 이를 바탕으로 이번 글에서는 Swagger를 설정하고 기본적으로 API를 정의하는 코드에 대해서 살펴보고자 합니다.
 
 ### 프로젝트에 Swagger 추가하기
+
 우선 작업을 시작하기 전에 Swagger를 프로젝트에 추가하고자 했습니다.
 
 https://swagger.io/
@@ -43,6 +44,7 @@ Swagger에 대한 공식 문서는 위에서 확인할 수 있습니다.
 저는 처음에 Maven으로 프로젝트를 설정했기 때문에 pom.xml 파일에 dependency를 추가해줬습니다.
 
 pom.xml 파일에 아래 내용을 바로 추가해주는 것도 가능하고,
+
 ```xml
 <dependency>
     <groupId>org.springdoc</groupId>
@@ -75,10 +77,9 @@ https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmv
 http://localhost:8080/swagger-ui/index.html
 ```
 
-그래서 이런식으로 내 프로젝트가 돌고 있는 서버 url에  `/swagger-ui/index.html`을 붙여주면 내 프로젝트의 api document를 확인할 수 있습니다.
+그래서 이런식으로 내 프로젝트가 돌고 있는 서버 url에 `/swagger-ui/index.html`을 붙여주면 내 프로젝트의 api document를 확인할 수 있습니다.
 
-![Swagger UI](./swagger_ui.png)*이미 API를 작성한 코드라서 아래에 API 목록이 뜨는 것을 확인할 수 있는데, 처음에는 빈 화면이 뜰 겁니다!*
-
+![Swagger UI](./swagger_ui.png)_이미 API를 작성한 코드라서 아래에 API 목록이 뜨는 것을 확인할 수 있는데, 처음에는 빈 화면이 뜰 겁니다!_
 
 ### API 추가하기
 
@@ -124,7 +125,7 @@ public class PlayerController {
 실제 API 정의는 다음과 같이 할 수 있습니다.
 
 ```java
-@Operation(summary = "ID로 사용자 조회", 
+@Operation(summary = "ID로 사용자 조회",
            description = "ID를 받아 해당 사용자를 반환한다.")
 @GetMapping("/{id}")
 public ResponseEntity<PlayerDto> getPlayerById(@PathVariable String id) {
@@ -146,7 +147,7 @@ public ResponseEntity<PlayerDto> getPlayerById(@PathVariable String id) {
 
 - `@Operation`
 
-  ``` java
+  ```java
   @Operation(summary = "ID로 사용자 조회", description = "ID를 받아 해당 사용자를 반환한다.")
   ```
 
@@ -154,12 +155,11 @@ public ResponseEntity<PlayerDto> getPlayerById(@PathVariable String id) {
 
 - `@GetMapping`
 
-    ```java
-    @GetMapping("/{id}")
-    ```
+  ```java
+  @GetMapping("/{id}")
+  ```
 
-    해당 Annotationadmf 통해 API의 method 및 url 설정해줄 수 있습니다. 여기서는 GetMapping으로 설정해주었으므로 GET method로 정의했음을 확인할 수 있고, url은 `/{id}`로 설정해주었기 때문에 PathVariable로 사용자의 id를 받아서 해당 id를 가진 사용자의 정보(`PlayerDto`)를 반환함을 확인할 수 있습니다.
-
+  해당 Annotationadmf 통해 API의 method 및 url 설정해줄 수 있습니다. 여기서는 GetMapping으로 설정해주었으므로 GET method로 정의했음을 확인할 수 있고, url은 `/{id}`로 설정해주었기 때문에 PathVariable로 사용자의 id를 받아서 해당 id를 가진 사용자의 정보(`PlayerDto`)를 반환함을 확인할 수 있습니다.
 
 이런 방식으로 annotation을 활용하여 다른 API들도 정의해주었습니다.
 

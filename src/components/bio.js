@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -31,11 +31,11 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio">
+    <div className="flex flex-col items-center my-2 hidden md:flex md:my-0">
       <StaticImage
-        className="bio-avatar"
+        className="min-w-[50px] rounded-full"
         layout="fixed"
-        formats={["auto", "webp", "avif"]}
+        formats={['auto', 'webp', 'avif']}
         src="../images/profile-pic.png"
         width={100}
         height={100}
@@ -43,42 +43,44 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <div>
-          <div className="bio-name">
-            {author.name}
-          </div>
-          <div className="bio-description">
-            {author?.summary || null}
-          </div>
-        </div>
+        <>
+          <div className="text-xl mt-4 font-semibold text-gray-800">{author.name}</div>
+          <div className="text-sm text-gray-600 mt-2">{author?.summary || null}</div>
+        </>
       )}
-      <div className="bio-link-wrapper">
-        <div>
-          <a href="https://github.com/jjminsuh">
-            <StaticImage
-              className="bio-link-icon"
-              layout="fixed"
-              formats={["auto", "webp", "avif"]}
-              src="../images/github-mark.png"
-              width={28}
-              height={28}
-              quality={95}
-              alt="Github Link"/>
-          </a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/minsuh-jo/">
-            <StaticImage
-              className="bio-link-icon"
-              layout="fixed"
-              formats={["auto", "webp", "avif"]}
-              src="../images/linkedin-logo.png"
-              width={28}
-              height={28}
-              quality={95}
-              alt="Linkedin Link"/>
-          </a>
-        </div>
+      <div className="flex items-center justify-center mt-4 gap-4">
+        <a
+          href="https://github.com/jjminsuh"
+          className="p-2 rounded-full hover:bg-gray-200 transition"
+          aria-label="Github"
+        >
+          <StaticImage
+            className="w-7 h-7"
+            layout="fixed"
+            formats={['auto', 'webp', 'avif']}
+            src="../images/github-mark.png"
+            width={28}
+            height={28}
+            quality={95}
+            alt="Github Link"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/minsuh-jo/"
+          className="p-2 rounded-full hover:bg-gray-200 transition"
+          aria-label="LinkedIn"
+        >
+          <StaticImage
+            className="w-7 h-7"
+            layout="fixed"
+            formats={['auto', 'webp', 'avif']}
+            src="../images/linkedin-logo.png"
+            width={28}
+            height={28}
+            quality={95}
+            alt="Linkedin Link"
+          />
+        </a>
       </div>
     </div>
   )
